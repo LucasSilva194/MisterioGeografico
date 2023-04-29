@@ -1,4 +1,6 @@
-Welcome to the _Mistério Geográfico_ Escape Room! This is a fun and educational activity that allows you to test your knowledge of geography while solving puzzles and clues to escape from a virtual room.
+# Mistério Geográfico - Digital Escape Room
+
+Welcome to the **Mistério Geográfico** Escape Room! This is a fun and educational activity that allows you to test your knowledge of geography while solving puzzles and clues to escape from a virtual room.
 
 ## How to Play
 
@@ -30,6 +32,6 @@ JavaScript
 
 ## Credits
 
-The game was developed by _Lucas Silva_ and _João Rocha_ as part of Object Oriented Programing class. It was inspired by other digital escape rooms and the desire to create a fun and educational activity for people to enjoy.
+The game was developed by **Lucas Silva** and **João Rocha** as part of Object Oriented Programing class. It was inspired by other digital escape rooms and the desire to create a fun and educational activity for people to enjoy.
 
-_Thank you_ for playing the Mistério Geográfico Escape Room! We hope you enjoy it and learn something new about geography along the way.
+**Thank you** for playing the Mistério Geográfico Escape Room! We hope you enjoy it and learn something new about geography along the way.
