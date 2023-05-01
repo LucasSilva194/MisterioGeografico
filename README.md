@@ -17,18 +17,18 @@ Your goal is to escape from a virtual room by solving puzzles and clues related 
 
 The Digital Geography Escape Room includes the following features:
 
-Multiple levels with increasing difficulty.
-Puzzles and clues related to geography.
-Timer to keep track of your progress.
-Engaging and interactive interface.
+Multiple levels with increasing difficulty  
+Puzzles and clues related to geography  
+Timer to keep track of your progress  
+Engaging and interactive interface  
 
 ## Technologies Used
 
 The game was developed using the following technologies:
 
-HTML.
-CSS.
-JavaScript.
+HTML  
+CSS  
+JavaScript  
 
 ## Credits
 
