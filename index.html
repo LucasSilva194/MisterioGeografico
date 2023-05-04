@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mistério Geográfico</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/index.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -37,5 +36,80 @@
         </a>
       </div>
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
+
+<style>
+  body {
+    background-image: url('../imgs/login-registo.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+  }
+
+  .title {
+    display: block;
+  }
+
+  #title {
+    font-size: 70px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 3vh;
+    margin-left: 50vw;
+    text-align: center;
+    text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
+  }
+
+  #map-image {
+    width: 35vw;
+    height: 40vh;
+    margin-left: 30vw;
+    margin-top: 25vh;
+    padding-bottom: 1vh;
+  }
+
+  #map-image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  #keys-image {
+    width: 20vw;
+    height: 20vh;
+    margin-left: -62vw;
+    margin-top: 15vh;
+  }
+
+  #keys-image:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  #leaderboard-image {
+    scale: 0.09;
+    margin-left: -15vw;
+    margin-top: -225vh;
+    position: absolute;
+    z-index: 1;
+  }
+
+  #leaderboard-image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  #faq-image {
+    scale: 0.1;
+    margin-left: 25vw;
+    margin-top: -16vh;
+    position: absolute;
+    z-index: 1;
+  }
+
+  #faq-image:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+</style>
