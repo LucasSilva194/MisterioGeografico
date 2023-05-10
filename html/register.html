@@ -4,9 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registar - Mistério Geográfico</title>
+    <title>Registo - Mistério Geográfico</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/access.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-    <h1>REGISTAR UTILIZADOR</h1>
+    <div id="main" class="container-fluid">
+      <div class="rectangle">
+        <div id="login-menu" class="container-fluid">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-12">
+              <img id="keys-image" src="../imgs/chaves.webp" alt="chaves" />
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-center">
+            <div id="login-register" class="col-auto text-center">Login</div>
+            <div id="login-register" class="col-auto text-center">|</div>
+            <div id="login-register" class="col-auto text-center">Registar</div>
+          </div>
+          <div class="row align-items-center justify-content-center">
+            <div id="subtext" class="col-12 text-center">Prepara-te para a aventura!</div>
+          </div>
+          <div id="username" class="row align-items-center justify-content-center">
+            <input id="username-input" type="text" placeholder="Nome de Utilizador" />
+          </div>
+          <div id="email" class="row align-items-center justify-content-center">
+            <input id="email-input" type="email" placeholder="E-mail" />
+          </div>
+          <div id="password" class="row align-items-center justify-content-center">
+            <input id="password-input" type="password" placeholder="Palavra-passe" />
+          </div>
+          <div class="row align-items-center justify-content-center">
+            <input type="button" id="login-button" onclick="register()" value="Criar Conta!" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/users.js"></script>
   </body>
 </html>

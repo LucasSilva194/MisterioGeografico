@@ -36,7 +36,7 @@ body {
 }
 
 #username {
-  margin-top: 10vh;
+  margin-top: 8vh;
 }
 
 ::placeholder {
@@ -60,6 +60,24 @@ body {
 #username-input:focus {
   transform: scale(1.05);
   outline: none;
+}
+
+#email {
+  margin-top: 3vh;
+}
+
+#email-input {
+  width: 25vw;
+  height: 7vh;
+  border-radius: 10px;
+  border: 1px solid #a7bbdf;
+  padding: 10px;
+  background-color: #a7bbdf;
+  color: white;
+}
+
+#email-input:hover {
+  transform: scale(1.05);
 }
 
 #password {
@@ -93,7 +111,7 @@ body {
   padding: 5px;
   background-color: #ffe47d;
   color: white;
-  margin: 2vh;
+  margin: 3vh;
 
   color: #808080;
 }
