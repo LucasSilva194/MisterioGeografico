@@ -77,13 +77,28 @@ function login() {
     return;
   }
 
+  /* check for admin login */
+  if (username === 'admin' && password === 'admin') {
+    Swal.fire({
+      icon: 'success',
+      title: 'Bem-vindo ADMIN!',
+      text: 'Login efetuado com sucesso!',
+      confirmButtonText: 'OK',
+      confirmButtonColor: '#d9b632',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = '../html/admin.html';
+      }
+    });
+    return;
+  }
+
   for (var i = 0; i < users.length; i++) {
     if (username === users[i].username && password === users[i].password) {
       showSuccessMessage();
       return;
     }
   }
-  console.log(users);
 
   showErrorMessage();
 }
