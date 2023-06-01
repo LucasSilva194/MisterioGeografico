@@ -7,15 +7,22 @@ body {
 
 .title {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 #leaderboard-image {
   display: flex;
   width: 20vh;
   height: 40vh;
-  margin-left: 30vw;
-  margin-top: -25vh;
+  margin-left: 35vw;
+  margin-top: 5vh;
+  padding: 10px;
+}
+
+#leaderboard-image:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 #title {
@@ -31,7 +38,7 @@ body {
   width: 35vw;
   height: 40vh;
   margin-left: 30vw;
-  margin-top: 25vh;
+  margin-top: 10vh;
   padding-bottom: 1vh;
 }
 
@@ -48,6 +55,17 @@ body {
 }
 
 #keys-image:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#faq-image {
+  margin-left: 15vw;
+  margin-top: -30vh;
+  width: 3vw;
+}
+
+#faq-image:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
