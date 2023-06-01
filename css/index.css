@@ -40,7 +40,7 @@ body {
   height: 40vh;
   margin-left: 30vw;
   margin-top: 10vh;
-  padding-bottom: 1vh;
+  padding-bottom: 3vh;
 }
 
 #map-image:hover {
@@ -69,4 +69,30 @@ body {
 #faq-image:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+
+#perfil {
+  display: block;
+  margin-left: 75vw;
+  margin-top: -5vh;
+  width: 20vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  color: white;
+
+  color: #808080;
+}
+
+#perfil:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+}
+
+a:hover {
+  text-decoration: none !important;
 }

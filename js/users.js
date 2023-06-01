@@ -19,8 +19,6 @@ let users = [
   },
 ];
 
-let loggedIn = false;
-
 // Check if users array exists in local storage
 if (localStorage.getItem('users') === null) {
   localStorage.setItem('users', JSON.stringify(users));
@@ -91,7 +89,6 @@ function login() {
         window.location.href = '../html/admin.html';
       }
     });
-    loggedIn = true;
     return;
   }
 
@@ -100,15 +97,16 @@ function login() {
       Swal.fire({
         icon: 'success',
         title: 'Sucesso!',
-        text: `Utilizador "${username}" logado com sucesso!`,
+        text: `Utilizador  logado com sucesso!`,
         confirmButtonText: 'OK',
         confirmButtonColor: '#d9b632',
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.href = '../html/index.html';
+          /* redirect to index */
+          window.location.href = '/';
         }
       });
-      loggedIn = true;
+      localStorage.setItem('loggedUser', JSON.stringify(users[i]));
       return;
     }
   }

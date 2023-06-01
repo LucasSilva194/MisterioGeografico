@@ -122,3 +122,14 @@ body {
   border: 1px solid #d9b632;
   color: #575757;
 }
+
+#return {
+  width: 20vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  color: #808080;
+  margin: 3vh;
+}

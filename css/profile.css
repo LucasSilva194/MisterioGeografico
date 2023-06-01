@@ -1,0 +1,126 @@
+body {
+  background-image: url('../imgs/fundo-perfil.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+.rectangle {
+  width: 30vw;
+  height: 85vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 4.5vh;
+  border-radius: 20px;
+}
+
+#profile-image {
+  width: 15vw;
+  height: 30vh;
+  padding-top: 1vh;
+  display: flex;
+  margin: auto;
+  border-radius: 90px;
+}
+
+.col-12 h4 {
+  margin-left: 1vw;
+}
+
+.col-12 h2 {
+  padding-bottom: 2.5vh;
+  margin-left: 1vw;
+  color: #f1cc42;
+}
+
+#editar {
+  width: 20vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin: 3vh;
+
+  color: #808080;
+}
+
+#editar:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+}
+
+#voltar {
+  width: 10vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin-top: 2.5vh;
+
+  color: #808080;
+}
+
+#voltar:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+}
+
+#confirmar {
+  width: 20vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+
+  color: #808080;
+}
+
+#confirmar:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+}
+
+#new-email {
+  width: 28vw;
+  height: 5vh;
+  margin-left: 1vw;
+  margin-top: 1vh;
+  margin-bottom: 2.5vh;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#new-password {
+  width: 28vw;
+  height: 5vh;
+  margin-left: 1vw;
+  margin-top: 1vh;
+  margin-bottom: 2.5vh;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#confirm-password {
+  width: 28vw;
+  height: 5vh;
+  margin-left: 1vw;
+  margin-top: 1vh;
+  margin-bottom: 2.5vh;
+  border-radius: 10px;
+  font-size: 20px;
+}

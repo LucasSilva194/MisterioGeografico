@@ -38,10 +38,20 @@
         >
           <img id="faq-image" src="imgs/question.webp" alt="faq" />
         </a>
-        <!-- invisible profile button -->
-        <button>Perfil</button>
+
+        <a href="html/profile.html">
+          <input id="perfil" type="button" value="Perfil" />
+        </a>
       </div>
     </div>
     <script src="./js/main.js"></script>
+
+    <script>
+      window.onload = function () {
+        let user = JSON.parse(localStorage.getItem('loggedUser'));
+
+        console.log('Utilizador:', user.username);
+      };
+    </script>
   </body>
 </html>

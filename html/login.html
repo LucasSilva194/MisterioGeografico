@@ -53,10 +53,43 @@
               </div>
             </a>
           </div>
+          <div class="row align-items-center justify-content-center">
+            <a href="../index.html">
+              <div id="subtext" class="col-auto" style="margin: 10px">Página inicial</div>
+            </a>
+          </div>
         </div>
       </div>
+      <div class="return-button"></div>
     </div>
 
     <script src="../js/users.js"></script>
   </body>
 </html>
+
+<script>
+  window.onload = function () {
+    let user = JSON.parse(localStorage.getItem('loggedUser'));
+
+    console.log('Utilizador:', user.username);
+
+    if (user) {
+      Swal.fire({
+        title: 'Já tem sessão iniciada!',
+        text: 'Deseja terminar sessão?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim',
+        cancelButtonText: 'Não',
+        confirmButtonColor: '#d9b632',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          localStorage.removeItem('loggedUser');
+          window.location.href = './login.html';
+        } else {
+          window.location.href = '/';
+        }
+      });
+    }
+  };
+</script>

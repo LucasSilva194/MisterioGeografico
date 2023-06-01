@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Perfil - Mistério Geográfico</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="rectangle">
+        <div id="profile-menu" class="container-fluid">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-12">
+              <img id="profile-image" src="../imgs/profile.jpg" alt="profile" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h4>Utilizador:</h4>
+              <h2 id="logged-username">Username</h2>
+            </div>
+            <div class="col-12">
+              <h4>Email:</h4>
+              <input type="text" id="new-email" />
+            </div>
+            <div class="col-12">
+              <h4>Palavra-passe:</h4>
+              <input type="password" id="new-password" />
+            </div>
+
+            <div class="col-12">
+              <h4>Confirmar palavra-passe:</h4>
+              <input type="password" id="confirm-password" />
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-center">
+            <div class="col-auto">
+              <input type="submit" id="confirmar" value="Confirmar" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-auto">
+            <a href="/">
+              <input id="voltar" type="button" value="Voltar" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  window.onload = function () {
+    let user = JSON.parse(localStorage.getItem('loggedUser'));
+    if (user) {
+      document.getElementById('logged-username').innerHTML = user.username;
+      document.getElementById('logged-email').innerHTML = user.email;
+      document.getElementById('logged-tempo').innerHTML = user.tempo;
+    } else {
+      Swal.fire({
+        title: 'Não tem sessão iniciada',
+        text: 'Será redirecionado para a página de login',
+        icon: 'warning',
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#d9b632',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = './login.html';
+        }
+      });
+    }
+  };
+</script>
