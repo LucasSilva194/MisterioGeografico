@@ -1,4 +1,11 @@
-// Users Array
+class User {
+  constructor(username, password, email) {
+    this.username = username;
+    this.password = password;
+    this.email = email;
+  }
+}
+
 let users = [
   {
     username: 'admin',
@@ -10,17 +17,9 @@ let users = [
     password: 'password1',
     email: 'user1@example.com',
   },
-  {
-    username: 'user2',
-    password: 'password2',
-    email: 'user2@example.com',
-  },
-  {
-    username: 'user3',
-    password: 'password3',
-    email: 'user3@example.com',
-  },
 ];
+
+let loggedIn = false;
 
 // Check if users array exists in local storage
 if (localStorage.getItem('users') === null) {
@@ -30,14 +29,16 @@ if (localStorage.getItem('users') === null) {
 }
 
 function loadUsers() {
-  users = JSON.parse(localStorage.getItem('users'));
+  users = JSON.parse(localStorage.getItem('users')).map(
+    (user) => new User(user.username, user.password, user.email)
+  );
 }
 
 function saveUsers() {
   localStorage.setItem('users', JSON.stringify(users));
 }
 
-function showSuccessMessage() {
+/* function showSuccessMessage() {
   Swal.fire({
     icon: 'success',
     title: 'Sucesso!',
@@ -45,7 +46,7 @@ function showSuccessMessage() {
     confirmButtonText: 'OK',
     confirmButtonColor: '#d9b632',
   });
-}
+} */
 
 function showErrorMessage() {
   Swal.fire({
@@ -90,12 +91,24 @@ function login() {
         window.location.href = '../html/admin.html';
       }
     });
+    loggedIn = true;
     return;
   }
 
   for (var i = 0; i < users.length; i++) {
     if (username === users[i].username && password === users[i].password) {
-      showSuccessMessage();
+      Swal.fire({
+        icon: 'success',
+        title: 'Sucesso!',
+        text: `Utilizador "${username}" logado com sucesso!`,
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#d9b632',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = '../html/index.html';
+        }
+      });
+      loggedIn = true;
       return;
     }
   }
@@ -136,11 +149,7 @@ function register() {
     }
   }
 
-  users.push({
-    username: username,
-    password: password,
-    email: email,
-  });
+  users.push(new User(username, password, email));
 
   saveUsers();
 
