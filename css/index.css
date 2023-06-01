@@ -6,7 +6,16 @@ body {
 }
 
 .title {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#leaderboard-image {
+  display: flex;
+  width: 20vh;
+  height: 40vh;
+  margin-left: 30vw;
+  margin-top: -25vh;
 }
 
 #title {
@@ -14,7 +23,6 @@ body {
   font-weight: bold;
   color: #fff;
   margin-top: 3vh;
-  margin-left: 50vw;
   text-align: center;
   text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
 }
@@ -42,30 +50,4 @@ body {
 #keys-image:hover {
   cursor: pointer;
   transform: scale(1.1);
-}
-
-#leaderboard-image {
-  scale: 0.09;
-  margin-left: -15vw;
-  margin-top: -225vh;
-  position: absolute;
-  z-index: 1;
-}
-
-#leaderboard-image:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
-#faq-image {
-  scale: 0.1;
-  margin-left: 25vw;
-  margin-top: -16vh;
-  position: absolute;
-  z-index: 1;
-}
-
-#faq-image:hover {
-  cursor: pointer;
-  transform: scale(1.2);
 }
