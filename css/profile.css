@@ -34,7 +34,7 @@ body {
 }
 
 .col-12 h2 {
-  padding-bottom: 2.5vh;
+  padding-bottom: 1vh;
   margin-left: 1vw;
   color: #f1cc42;
 }
@@ -84,6 +84,7 @@ body {
   border: 1px solid #ffe47d;
   padding: 5px;
   background-color: #ffe47d;
+  margin: 1vh;
 
   color: #808080;
 }
@@ -100,7 +101,7 @@ body {
   height: 5vh;
   margin-left: 1vw;
   margin-top: 1vh;
-  margin-bottom: 2.5vh;
+  margin-bottom: 1vh;
   border-radius: 10px;
   font-size: 20px;
 }
@@ -110,7 +111,7 @@ body {
   height: 5vh;
   margin-left: 1vw;
   margin-top: 1vh;
-  margin-bottom: 2.5vh;
+  margin-bottom: 1vh;
   border-radius: 10px;
   font-size: 20px;
 }
@@ -120,7 +121,7 @@ body {
   height: 5vh;
   margin-left: 1vw;
   margin-top: 1vh;
-  margin-bottom: 2.5vh;
+  margin-bottom: 1vh;
   border-radius: 10px;
   font-size: 20px;
 }

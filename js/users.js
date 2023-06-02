@@ -97,7 +97,7 @@ function login() {
       Swal.fire({
         icon: 'success',
         title: 'Sucesso!',
-        text: `Utilizador  logado com sucesso!`,
+        text: `Bem vindo(a), ${username}!`,
         confirmButtonText: 'OK',
         confirmButtonColor: '#d9b632',
       }).then((result) => {
@@ -160,6 +160,71 @@ function register() {
   }).then((result) => {
     if (result.isConfirmed) {
       window.location.href = '../html/login.html';
+    }
+  });
+}
+
+// Edit user function
+function editUser() {
+  let newEmail = document.getElementById('new-email').value;
+  let newPassword = document.getElementById('new-password').value;
+  let newPasswordConfirm = document.getElementById('confirm-password').value;
+
+  let currentEmail = JSON.parse(localStorage.getItem('loggedUser')).email;
+  let currentPassword = JSON.parse(localStorage.getItem('loggedUser')).password;
+
+  if (newEmail === '') {
+    newEmail = currentEmail;
+  } else {
+    for (var i = 0; i < users.length; i++) {
+      if (newEmail === users[i].email) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Erro de Edição',
+          text: 'O email já existe!',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#d9b632',
+        });
+        return;
+      }
+    }
+  }
+
+  if (newPassword === '') {
+    newPassword = currentPassword;
+  } else if (newPassword !== newPasswordConfirm) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Erro de Edição',
+      text: 'As palavras-passe não coincidem!',
+      confirmButtonText: 'OK',
+      confirmButtonColor: '#d9b632',
+    });
+    return;
+  }
+
+  for (var i = 0; i < users.length; i++) {
+    if (currentEmail === users[i].email) {
+      users[i].email = newEmail;
+      users[i].password = newPassword;
+    }
+  }
+
+  saveUsers();
+  let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+  loggedUser.email = newEmail;
+  loggedUser.password = newPassword;
+  localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+
+  Swal.fire({
+    icon: 'success',
+    title: 'Sucesso!',
+    text: 'Edição efetuada com sucesso!',
+    confirmButtonText: 'OK',
+    confirmButtonColor: '#d9b632',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      window.location.href = '../html/profile.html';
     }
   });
 }
