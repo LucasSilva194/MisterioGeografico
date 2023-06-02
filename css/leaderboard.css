@@ -1,0 +1,50 @@
+body {
+  background-image: url('../imgs/fundo-leaderboard.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+#title {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: bold;
+  color: #fff;
+}
+
+#leaderboard-table {
+  width: 60vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  margin-top: 4.5vh;
+  border-radius: 20px;
+  padding: 0 !important;
+}
+
+#voltar {
+  width: 10vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin-top: 2.5vh;
+
+  color: #808080;
+}
+
+#voltar:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+}

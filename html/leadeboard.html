@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaderboard - Mistério Geográfico</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/leaderboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-    <h1>TABELA DE MELHORES TEMPOS</h1>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1 id="title" class="text-center">Leaderboard</h1>
+        </div>
+      </div>
+      <div id="leaderboard-table" class="row">
+        <div class="col-12">
+          <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Posição</th>
+                <th scope="col">Username</th>
+                <th scope="col">Tempo</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="col-auto">
+            <a href="/">
+              <input id="voltar" type="button" value="Voltar" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script src="../js/leaderboard.js"></script>
 </html>
