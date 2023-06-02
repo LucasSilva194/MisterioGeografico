@@ -50,7 +50,12 @@
       window.onload = function () {
         let user = JSON.parse(localStorage.getItem('loggedUser'));
 
-        console.log('Utilizador:', user.username);
+        if (localStorage.getItem('loggedUser') === null) {
+          document.getElementById('perfil').remove();
+        }
+      };
+      window.onbeforeunload = function () {
+        localStorage.clear();
       };
     </script>
   </body>

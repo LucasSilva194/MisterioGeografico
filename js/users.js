@@ -107,6 +107,7 @@ function login() {
         }
       });
       localStorage.setItem('loggedUser', JSON.stringify(users[i]));
+
       return;
     }
   }
