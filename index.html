@@ -25,7 +25,7 @@
         </a>
       </div>
       <div class="buttons">
-        <a href="html/levels.html">
+        <a id="levels" href="html/levels.html">
           <img id="map-image" src="imgs/mapa.webp" alt="mapa" />
         </a>
 
@@ -52,10 +52,8 @@
 
         if (localStorage.getItem('loggedUser') === null) {
           document.getElementById('perfil').remove();
+          document.getElementById('levels').removeAttribute('href');
         }
-      };
-      window.onbeforeunload = function () {
-        localStorage.clear();
       };
     </script>
   </body>

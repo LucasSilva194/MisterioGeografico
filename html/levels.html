@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Níveis - Mistério Geográfico</title>
+    <link rel="stylesheet" href="../css/level.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Níveis - Mistério Geográfico</title>
-  <link rel="stylesheet" href="../css/level.css">
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</head>
-
-<body>
-
-  <div class="container-fluid">
-    <div class="row">
+  <body>
+    <div class="container-fluid">
+      <div class="row">
         <a href="">
           <img id="bandeiraN1" src="../imgs/bandeira.webp" alt="bandeira" />
-          <h4 id="nome1">Nivel 1: Mundo em<br>Miniatura</h4>
+          <h4 id="nome1">Nivel 1: Mundo em<br />Miniatura</h4>
         </a>
 
         <h3 id="userNivel"></h3>
-    </div>
-    <div>
-      <img id="bandeiraN2" src="../imgs/bandeira.webp" alt="bandeira 2"/>
-      <h4 id="nome2"> Nivel 2: Viagem ao <br>redor mundo</h4>
+      </div>
+      <div>
+        <img id="bandeiraN2" src="../imgs/bandeira.webp" alt="bandeira 2" />
+        <h4 id="nome2">Nivel 2: Viagem ao <br />redor mundo</h4>
 
-      <img id="bandeiraN4" src="../imgs/bandeira.webp" alt="bandeira 4"/>
-      <h4 id="nome4"> Nivel 4: <br>Geografia em Ação</h4>
-    </div>
-    <div>
-      <img id="bandeiraN3" src="../imgs/bandeira.webp" alt="bandeira 3"/>
-      <h4 id="nome3"> Nivel 3: <br>Cartografia Viva</h4>
+        <img id="bandeiraN4" src="../imgs/bandeira.webp" alt="bandeira 4" />
+        <h4 id="nome4">Nivel 4: <br />Geografia em Ação</h4>
+      </div>
+      <div>
+        <img id="bandeiraN3" src="../imgs/bandeira.webp" alt="bandeira 3" />
+        <h4 id="nome3">Nivel 3: <br />Cartografia Viva</h4>
 
-      <img id="bandeiraN5" src="../imgs/bandeira.webp" alt="bandeira 5"/>
-      <h4 id="nome5"> Nivel 5: <br>Enigma das Bandeiras</h4>
+        <img id="bandeiraN5" src="../imgs/bandeira.webp" alt="bandeira 5" />
+        <h4 id="nome5">Nivel 5: <br />Enigma das Bandeiras</h4>
+      </div>
+      <div class="col-auto">
+        <a href="/">
+          <input id="Regressar" type="button" value="Regressar" />
+        </a>
+      </div>
     </div>
-    <div class="col-auto">
-      <a href="/">
-        <input id="Regressar" type="button" value="Regressar" />
-      </a>
-    </div>
-  </div> 
-</body>
-<script>
-  document.getElementById("userNivel").innerHTML = `Utilizador: ${localStorage.getItem("loggedUser")}`
-</script>
-
+  </body>
+  <script>
+    /* get loggedUser username */
+    let user = JSON.parse(localStorage.getItem('loggedUser'));
+    document.getElementById('userNivel').innerHTML = `Utilizador: ${user.username}`;
+  </script>
 </html>
