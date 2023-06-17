@@ -1,194 +1,188 @@
-
-
 body {
-    background-image: url('../imgs/rotas.webp');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100vw 100vh;
+  background-image: url('../imgs/rotas.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
 }
 
-  .col {
-    display: flex;
-    align-items: center;
-  }
-  
+.col {
+  display: flex;
+  align-items: center;
+}
+
 #bandeiraN1 {
-    display: flex;
-    width: 15vh;
-    height: 25vh;
-    margin-left: 43vw;
-    margin-top: 1.2vh;
-    padding: 10px;
+  display: flex;
+  width: 15vh;
+  height: 25vh;
+  margin-left: 43vw;
+  margin-top: 1.2vh;
+  padding: 10px;
 }
 
 #bandeiraN1:hover {
-    cursor: pointer;
-    transform: scale(1.05);
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
 #nome1 {
-    display: flex;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin-top: -20vh;
-    margin-left: 52vw;
-    text-align: center;
-    text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
-    position: absolute;
-    text-align: left;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: -20vh;
+  margin-left: 52vw;
+  text-align: center;
+  text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
+  position: absolute;
+  text-align: left;
 }
 
 @media screen and (max-width: 600px) {
-    #nome1 {
-        font-size: 10px;
-    }
+  #nome1 {
+    font-size: 10px;
+  }
 }
 
 #bandeiraN2 {
-    display: flex;
-    width: 15vh;
-    height: 25vh;
-    margin-left: 29vw;
-    margin-top: 1.2vh;
-    padding: 10px;
+  display: flex;
+  width: 15vh;
+  height: 25vh;
+  margin-left: 29vw;
+  margin-top: 1.2vh;
+  padding: 10px;
 }
 
 #nome2 {
-    display: flex;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin-top: -20vh;
-    margin-left: 38vw;
-    text-align: center;
-    text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
-    position: absolute;
-    text-align: left;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: -20vh;
+  margin-left: 38vw;
+  text-align: center;
+  text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
+  position: absolute;
+  text-align: left;
 }
 
 @media screen and (max-width: 600px) {
-    #nome2 {
-        font-size: 10px;
-    }
+  #nome2 {
+    font-size: 10px;
+  }
 }
 
 #bandeiraN3 {
-    display: flex;
-    width: 15vh;
-    height: 25vh;
-    margin-left: 10vw;
-    margin-top: 2vh;
-    padding: 10px;
+  display: flex;
+  width: 15vh;
+  height: 25vh;
+  margin-left: 10vw;
+  margin-top: 2vh;
+  padding: 10px;
 }
 
 #nome3 {
-    display: flex;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin-top: -20vh;
-    margin-left: 19vw;
-    text-align: center;
-    text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
-    position: absolute;
-    text-align: left;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: -20vh;
+  margin-left: 19vw;
+  text-align: center;
+  text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
+  position: absolute;
+  text-align: left;
 }
 
 @media screen and (max-width: 600px) {
-    #nome3 {
-        font-size: 10px;
-    }
+  #nome3 {
+    font-size: 10px;
+  }
 }
 
 #bandeiraN4 {
-    display: flex;
-    width: 15vh;
-    height: 25vh;
-    margin-left: 55vw;
-    margin-top:-25vh;
-    padding: 10px;
+  display: flex;
+  width: 15vh;
+  height: 25vh;
+  margin-left: 55vw;
+  margin-top: -25vh;
+  padding: 10px;
 }
 
 #nome4 {
-    display: flex;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin-top: -20vh;
-    margin-left: 64vw;
-    text-align: center;
-    text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
-    position: absolute;
-    text-align: left;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: -20vh;
+  margin-left: 64vw;
+  text-align: center;
+  text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
+  position: absolute;
+  text-align: left;
 }
 
 @media screen and (max-width: 600px) {
-    #nome4 {
-        font-size: 10px;
-    }
+  #nome4 {
+    font-size: 10px;
+  }
 }
 
 #bandeiraN5 {
-    display: flex;
-    width: 15vh;
-    height: 25vh;
-    margin-left: 50vw;
-    margin-top:-25vh;
-    padding: 10px;
+  display: flex;
+  width: 15vh;
+  height: 25vh;
+  margin-left: 50vw;
+  margin-top: -25vh;
+  padding: 10px;
 }
 
 #nome5 {
-    display: flex;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin-top: -20vh;
-    margin-left: 59vw;
-    text-align: center;
-    text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
-    position: absolute;
-    text-align: left;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: -20vh;
+  margin-left: 59vw;
+  text-align: center;
+  text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
+  position: absolute;
+  text-align: left;
 }
 
 @media screen and (max-width: 600px) {
-    #nome5 {
-        font-size: 10px;
-    }
+  #nome5 {
+    font-size: 10px;
+  }
 }
 
 #Regressar {
-    width: 10vw;
-    height: 6vh;
-    border-radius: 15px;
-    border: 1px solid #ffe47d;
-    padding: 5px;
-    background-color: #ffe47d;
-    margin-top: 10vh;
-  
-    color: #808080;
-  }
-  
-  #Regressar:hover {
-    transform: scale(1.05);
-    background-color: #d9b632;
-    border: 1px solid #d9b632;
-    color: #575757;
-  }
+  width: 10vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin-top: 10vh;
 
-  #userNivel {
-    display: flex;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin-top: 1.5vh;
-    margin-left: 2vw;
-    text-align: center;
-    text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
-    position: absolute;
-    text-align: left;
-  }
-  
+  color: #808080;
+}
 
+#Regressar:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+}
 
-
+#userNivel {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 1.5vh;
+  margin-left: 2vw;
+  text-align: center;
+  text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
+  position: absolute;
+  text-align: left;
+}

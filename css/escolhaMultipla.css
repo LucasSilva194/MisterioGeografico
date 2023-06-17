@@ -1,0 +1,125 @@
+body {
+  background-image: url('../imgs/nivel1.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+#message {
+  width: 40vw;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12vw;
+}
+
+#message-body {
+  text-align: center;
+  font-size: 35px;
+  color: #d9b632;
+}
+
+#question {
+  width: 60vw;
+  height: 23vh;
+  display: flex;
+  margin-left: 13vw;
+  margin-top: 9vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  flex-direction: column;
+}
+
+#question-title {
+  font-size: 35px;
+  margin-top: 1vh;
+  color: #d9b632;
+}
+
+#question-body {
+  text-align: center;
+}
+
+#answer1 {
+  width: 20vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin-right: 10vw;
+  margin-left: 13vw;
+  color: #808080;
+  font-size: 25px;
+}
+
+#answer1:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+}
+
+#answer2 {
+  width: 20vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  color: #808080;
+  font-size: 25px;
+}
+
+#answer2:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+}
+
+#answer3 {
+  width: 20vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin-right: 10vw;
+  margin-left: 13vw;
+  margin-top: 5vh;
+  color: #808080;
+  font-size: 25px;
+}
+
+#answer3:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+}
+
+#answer4 {
+  width: 20vw;
+  height: 8vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  margin-top: 5vh;
+  background-color: #ffe47d;
+  color: #808080;
+  font-size: 25px;
+}
+
+#answer4:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+}
