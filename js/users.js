@@ -1,8 +1,9 @@
 class User {
-  constructor(username, password, email) {
+  constructor(username, password, email, time = '-') {
     this.username = username;
     this.password = password;
     this.email = email;
+    this.time = time;
   }
 }
 
@@ -11,11 +12,25 @@ let users = [
     username: 'admin',
     password: 'admin',
     email: 'admin@example.com',
+    time: '-',
   },
   {
     username: 'user1',
     password: 'password1',
     email: 'user1@example.com',
+    time: '-',
+  },
+  {
+    username: 'user2',
+    password: 'password2',
+    email: 'user2@example.com',
+    time: '-',
+  },
+  {
+    username: 'user3',
+    password: 'password3',
+    email: 'user3@example.com',
+    time: '-',
   },
 ];
 

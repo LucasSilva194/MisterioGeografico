@@ -16,6 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-left: 12vw;
+  margin-top: 20vh;
 }
 
 #message-body {
@@ -29,11 +30,13 @@ body {
   height: 23vh;
   display: flex;
   margin-left: 13vw;
-  margin-top: -5vh;
+  margin-top: 10vh;
   align-items: center;
   justify-content: center;
   font-size: 25px;
   flex-direction: column;
+  z-index: 1;
+  position: absolute;
 }
 
 #question-title {

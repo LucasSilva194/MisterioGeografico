@@ -10,36 +10,50 @@ function createLeaderboard() {
   var table = document.querySelector('#leaderboard-table table');
   var count = 1;
 
-  for (var i = 0; i < usernames.length; i++) {
-    if (usernames[i] !== 'admin') {
-      var row = document.createElement('tr');
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].username !== 'admin') {
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
 
-      var positionCell = document.createElement('td');
-      var usernameCell = document.createElement('td');
-      var timeCell = document.createElement('td');
-
-      positionCell.textContent = count;
-      usernameCell.textContent = usernames[i];
-      timeCell.textContent = '-';
-
-      row.appendChild(positionCell);
-      row.appendChild(usernameCell);
-      row.appendChild(timeCell);
-
-      table.appendChild(row);
-
+      cell1.innerHTML = count;
+      cell2.innerHTML = users[i].username;
+      cell3.innerHTML = users[i].time;
       count++;
     }
   }
 
-  /* highlight loogedUser in table */
-  var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-  var rows = document.querySelectorAll('#leaderboard-table table tr');
+  var table = document.querySelector('#leaderboard-table table');
+  var rows = table.querySelectorAll('tr');
+  var sortedRows = [];
 
   for (var i = 0; i < rows.length; i++) {
-    if (rows[i].children[1].textContent === loggedUser.username) {
-      rows[i].style.backgroundColor = '#c9c9c9';
+    sortedRows.push(rows[i]);
+  }
+
+  sortedRows.sort(function (a, b) {
+    var aTime = a.children[2].textContent;
+    var bTime = b.children[2].textContent;
+
+    if (aTime < bTime) {
+      return 1; // Invert the return value from -1 to 1
+    } else if (aTime > bTime) {
+      return -1; // Invert the return value from 1 to -1
+    } else {
+      return 0;
     }
+  });
+
+  for (var i = 0; i < sortedRows.length; i++) {
+    table.appendChild(sortedRows[i]);
+  }
+
+  /* arrange numbers */
+  var rows = table.querySelectorAll('tr');
+
+  for (var i = 0; i < rows.length; i++) {
+    rows[i + 1].children[0].innerHTML = i + 1;
   }
 }
 

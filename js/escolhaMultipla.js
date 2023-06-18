@@ -54,6 +54,8 @@ var questions = [
 
 var usedQuestions = []; // Array to store indices of used questions
 
+let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+
 // Function to randomly select a question that has not been used before
 function getRandomQuestion() {
   var unusedQuestions = questions.filter(function (question, index) {
@@ -153,7 +155,29 @@ function updateTimer() {
 function stopTimerAndSaveTime() {
   var endTime = new Date().getTime();
   var elapsedTime = endTime - startTime;
-  localStorage.setItem('levelTime', elapsedTime);
+  var seconds = Math.floor(elapsedTime / 1000);
+  var minutes = Math.floor(seconds / 60);
+  seconds %= 60;
+
+  if (seconds < 10) {
+    seconds = '0' + seconds;
+  }
+  if (minutes < 10) {
+    minutes = '0' + minutes;
+  }
+
+  // Save the time to loggedUser
+  loggedUser.time = minutes + ':' + seconds;
+  localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+
+  // Save the time to the users array in localStorage
+  var users = JSON.parse(localStorage.getItem('users'));
+  users.forEach(function (user) {
+    if (user.username === loggedUser.username) {
+      user.time = loggedUser.time;
+    }
+  });
+  localStorage.setItem('users', JSON.stringify(users));
 }
 
 // Function to populate the HTML elements with a randomly selected question
