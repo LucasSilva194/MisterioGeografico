@@ -121,6 +121,7 @@ body {
   background-color: #d9b632;
   border: 1px solid #d9b632;
   color: #575757;
+  cursor: pointer;
 }
 
 #return {

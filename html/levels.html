@@ -17,7 +17,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <a href="">
+        <a id="level1" href="./entrada.html">
           <img id="bandeiraN1" src="../imgs/bandeira.webp" alt="bandeira" />
           <h4 id="nome1">Nivel 1: Mundo em<br />Miniatura</h4>
         </a>
@@ -49,5 +49,9 @@
     /* get loggedUser username */
     let user = JSON.parse(localStorage.getItem('loggedUser'));
     document.getElementById('userNivel').innerHTML = `Utilizador: ${user.username}`;
+
+    document.getElementById('level1').addEventListener('click', () => {
+      localStorage.setItem('level', 1);
+    });
   </script>
 </html>

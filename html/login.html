@@ -84,7 +84,7 @@
         confirmButtonColor: '#d9b632',
       }).then((result) => {
         if (result.isConfirmed) {
-          localStorage.removeItem('loggedUser');
+          localStorage.clear();
           window.location.href = './login.html';
         } else {
           window.location.href = '/';
