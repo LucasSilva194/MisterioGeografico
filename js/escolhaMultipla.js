@@ -1,0 +1,210 @@
+// Define an array of questions and answers
+var questions = [
+  {
+    question: 'Qual dos seguintes países não faz parte do Reino Unido?',
+    answers: ['Inglaterra', 'Escócia', 'Irlanda', 'País de Gales'],
+    correctAnswer: 2,
+  },
+  {
+    question: 'Qual dos seguintes continentes é o menor em tamanho?',
+    answers: ['Ásia', 'Austrália', 'Europa', 'América do Sul'],
+    correctAnswer: 1,
+  },
+  {
+    question: 'Qual é o pico de montanha mais alto de África?',
+    answers: ['Monte Kilimanjaro', 'Monte Elbrus', 'Monte Everest', 'Monte Fuji'],
+    correctAnswer: 0,
+  },
+  {
+    question: 'Qual dos seguintes oceanos é o maior do mundo?',
+    answers: ['Oceano Atlântico', 'Oceano Índico', 'Oceano Pacífico', 'Oceano Ártico'],
+    correctAnswer: 2,
+  },
+  {
+    question: 'Qual é a capital do Canadá?',
+    answers: ['Toronto', 'Ottawa', 'Vancouver', 'Montreal'],
+    correctAnswer: 1,
+  },
+  {
+    question: 'Qual dos seguintes países não está localizado na América do Sul?',
+    answers: ['Brasil', 'Argentina', 'México', 'Chile'],
+    correctAnswer: 2,
+  },
+  {
+    question: 'Qual dos seguintes rios é o mais longo do mundo?',
+    answers: ['Rio Amazonas', 'Rio Nilo', 'Rio Yangtze', 'Rio Mississipi'],
+    correctAnswer: 1,
+  },
+  {
+    question: 'Qual dos seguintes países é o menor em termos de área terrestre?',
+    answers: ['Malta', 'Mónaco', 'Vaticano', 'San Marino'],
+    correctAnswer: 2,
+  },
+  {
+    question: 'Qual dos seguintes desertos é o maior do mundo?',
+    answers: ['Deserto do Saara', 'Deserto da Arábia', 'Deserto de Gobi', 'Deserto de Kalahari'],
+    correctAnswer: 0,
+  },
+  {
+    question: 'Qual dos seguintes países é o maior em termos de área terrestre?',
+    answers: ['China', 'Índia', 'Rússia', 'Estados Unidos da América'],
+    correctAnswer: 2,
+  },
+];
+
+var usedQuestions = []; // Array to store indices of used questions
+
+// Function to randomly select a question that has not been used before
+function getRandomQuestion() {
+  var unusedQuestions = questions.filter(function (question, index) {
+    return usedQuestions.indexOf(index) === -1;
+  });
+
+  if (unusedQuestions.length === 0) {
+    // All questions have been used, reset the usedQuestions array
+    usedQuestions = [];
+    unusedQuestions = questions;
+  }
+
+  var randomIndex = Math.floor(Math.random() * unusedQuestions.length);
+  var selectedQuestion = unusedQuestions[randomIndex];
+  usedQuestions.push(questions.indexOf(selectedQuestion));
+
+  return selectedQuestion;
+}
+
+// Function to check the selected answer and display a SweetAlert message
+function checkAnswer(selectedAnswer) {
+  var selectedQuestion = questions[usedQuestions[usedQuestions.length - 1]];
+  var correctAnswer = selectedQuestion.answers[selectedQuestion.correctAnswer];
+
+  if (selectedAnswer === correctAnswer) {
+    Swal.fire({
+      title: 'Resposta correta!',
+      icon: 'success',
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      willClose: () => {
+        // Move to the next question
+        populateQuestion();
+      },
+    });
+  } else {
+    Swal.fire({
+      title: 'Resposta incorreta!',
+      icon: 'error',
+      showConfirmButton: false,
+      timer: 1500,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+    });
+  }
+}
+
+// Function to attach event listeners to the answer buttons
+function attachEventListeners() {
+  var answerButtons = document.getElementsByClassName('answer-button');
+  for (var i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].addEventListener('click', function () {
+      checkAnswer(this.value);
+    });
+  }
+}
+
+var startTime; // Variable to store the start time
+var timerElement = document.getElementById('timer-body'); // Timer element in HTML
+
+// Function to start the timer
+function startTimer() {
+  startTime = new Date().getTime();
+  updateTimer();
+}
+
+// Function to update the timer display
+function updateTimer() {
+  var currentTime = new Date().getTime();
+  var elapsedTime = currentTime - startTime;
+  var seconds = Math.floor(elapsedTime / 1000);
+  var minutes = Math.floor(seconds / 60);
+  seconds %= 60;
+
+  // Add leading zero if seconds or minutes is less than 10
+  if (seconds < 10) {
+    seconds = '0' + seconds;
+  }
+  if (minutes < 10) {
+    minutes = '0' + minutes;
+  }
+
+  // Update the timer element with the current time
+  timerElement.textContent = minutes + ':' + seconds;
+
+  // Call updateTimer again after 1 second
+  setTimeout(updateTimer, 1000);
+}
+
+// Function to stop the timer and save the time to localStorage
+function stopTimerAndSaveTime() {
+  var endTime = new Date().getTime();
+  var elapsedTime = endTime - startTime;
+  localStorage.setItem('levelTime', elapsedTime);
+}
+
+// Function to populate the HTML elements with a randomly selected question
+function populateQuestion() {
+  // Check if the maximum number of questions has been reached
+  if (usedQuestions.length >= 4) {
+    // Stop the timer and save the time to localStorage
+    stopTimerAndSaveTime();
+    // Redirect to ./levels.html
+    Swal.fire({
+      title: 'Parabéns!',
+      text: `Concluiu o desafio dos continentes em ${
+        timerElement.textContent.split(':')[0]
+      } minutos e ${timerElement.textContent.split(':')[1]} segundos!`,
+      icon: 'success',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading();
+      },
+      willClose: () => {
+        window.location.href = './levels.html';
+      },
+    });
+  }
+
+  // Get references to the HTML elements
+  var questionTitle = document.getElementById('question-title');
+  var questionBody = document.getElementById('question-body');
+  var answer1 = document.getElementById('answer1');
+  var answer2 = document.getElementById('answer2');
+  var answer3 = document.getElementById('answer3');
+  var answer4 = document.getElementById('answer4');
+
+  // Randomly select a question that has not been used before
+  var selectedQuestion = getRandomQuestion();
+
+  // Populate the HTML elements with the selected question and answers
+  questionTitle.textContent = 'Desafio dos Continentes:';
+  questionBody.textContent = selectedQuestion.question;
+  answer1.value = selectedQuestion.answers[0];
+  answer2.value = selectedQuestion.answers[1];
+  answer3.value = selectedQuestion.answers[2];
+  answer4.value = selectedQuestion.answers[3];
+
+  // Attach event listeners to the answer buttons
+  attachEventListeners();
+}
+
+startTimer();
+
+// Call the function to populate the initial question
+populateQuestion();

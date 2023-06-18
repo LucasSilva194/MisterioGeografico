@@ -29,7 +29,7 @@ body {
   height: 23vh;
   display: flex;
   margin-left: 13vw;
-  margin-top: 9vh;
+  margin-top: -5vh;
   align-items: center;
   justify-content: center;
   font-size: 25px;
@@ -122,4 +122,17 @@ body {
   background-color: #d9b632;
   border: 1px solid #d9b632;
   color: #575757;
+}
+
+#timer-title {
+  font-size: 35px;
+  margin-top: 1vh;
+  margin-left: 1vw;
+  color: #d9b632;
+}
+
+#timer-body {
+  font-size: 25px;
+  margin-left: 2.5vw;
+  color: white;
 }

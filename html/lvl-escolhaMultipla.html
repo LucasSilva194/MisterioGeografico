@@ -15,6 +15,12 @@
   </head>
   <body>
     <div id="main" class="container-fluid">
+      <div class="row">
+        <div id="timer" class="col-auto">
+          <p id="timer-title">Tempo:</p>
+          <p id="timer-body">00:00</p>
+        </div>
+      </div>
       <div class="row align-items-center justify-content-center mx-auto text-align-center">
         <div id="question" class="col-auto">
           <p id="question-title">Título do desafio:</p>
@@ -33,22 +39,23 @@
         <div id="answers" class="col-auto">
           <div class="row align-items-center justify-content-center mx-auto text-align-center">
             <div class="col-auto">
-              <input id="answer1" type="button" value="Resposta 1" />
+              <input id="answer1" class="answer-button" type="button" value="Resposta 1" />
             </div>
             <div class="col-auto">
-              <input id="answer2" type="button" value="Resposta 2" />
+              <input id="answer2" class="answer-button" type="button" value="Resposta 2" />
             </div>
           </div>
           <div class="row align-items-center justify-content-center mx-auto text-align-center">
             <div class="col-auto">
-              <input id="answer3" type="button" value="Resposta 3" />
+              <input id="answer3" class="answer-button" type="button" value="Resposta 3" />
             </div>
             <div class="col-auto">
-              <input id="answer4" type="button" value="Resposta 4" />
+              <input id="answer4" class="answer-button" type="button" value="Resposta 4" />
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="../js/escolhaMultipla.js"></script>
 </html>
