@@ -1,0 +1,171 @@
+body {
+  background-image: url('../imgs/nivel2.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+#timer-title {
+  font-size: 35px;
+  margin-top: 1vh;
+  margin-left: 1vw;
+  color: #d9b632;
+}
+
+#timer-body {
+  font-size: 25px;
+  margin-left: 2.5vw;
+  color: white;
+}
+
+#message {
+  width: 60vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -12vw;
+  margin-top: 20vh;
+}
+
+#message-body {
+  text-align: center;
+  font-size: 35px;
+  color: #d9b632;
+}
+
+#question {
+  width: 60vw;
+  height: 23vh;
+  display: flex;
+  margin-left: -12vw;
+  margin-top: 10vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+}
+
+#question-title {
+  font-size: 35px;
+  margin-top: 1vh;
+  color: #d9b632;
+}
+
+#question-body {
+  text-align: center;
+}
+
+#answers {
+  margin-left: -10vw;
+  margin-top: 0vh;
+}
+
+label {
+  font-size: 25px;
+  color: white;
+  margin: 0 !important;
+}
+
+#answer1 {
+  width: 4vw;
+  height: 4vh;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+#answer1:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#answer2 {
+  width: 4vw;
+  height: 4vh;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+#answer2:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#answer3 {
+  width: 4vw;
+  height: 4vh;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+#answer3:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#answer4 {
+  width: 4vw;
+  height: 4vh;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+#answer4:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#answer5 {
+  width: 4vw;
+  height: 4vh;
+  margin-top: 1vh;
+}
+
+#answer5:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#voltar {
+  width: 10vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin-right: 30vw;
+  color: #808080;
+}
+
+#voltar:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+  cursor: pointer;
+}
+
+#avancar {
+  width: 10vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin-left: 30vw;
+  color: #808080;
+}
+
+#avancar:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+  cursor: pointer;
+}

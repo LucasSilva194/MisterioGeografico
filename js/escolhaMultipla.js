@@ -75,7 +75,6 @@ function getRandomQuestion() {
   return selectedQuestion;
 }
 
-// Function to check the selected answer and display a SweetAlert message
 function checkAnswer(selectedAnswer) {
   var selectedQuestion = questions[usedQuestions[usedQuestions.length - 1]];
   var correctAnswer = selectedQuestion.answers[selectedQuestion.correctAnswer];
@@ -201,6 +200,7 @@ function populateQuestion() {
       },
       willClose: () => {
         window.location.href = './levels.html';
+        loggedUser.completedLevels.push('1');
       },
     });
   }

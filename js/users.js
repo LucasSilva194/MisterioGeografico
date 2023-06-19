@@ -13,24 +13,28 @@ let users = [
     password: 'admin',
     email: 'admin@example.com',
     time: '-',
+    completedLevels: [],
   },
   {
     username: 'user1',
     password: 'password1',
     email: 'user1@example.com',
     time: '-',
+    completedLevels: [],
   },
   {
     username: 'user2',
     password: 'password2',
     email: 'user2@example.com',
     time: '-',
+    completedLevels: [],
   },
   {
     username: 'user3',
     password: 'password3',
     email: 'user3@example.com',
     time: '-',
+    completedLevels: [],
   },
 ];
 
@@ -43,7 +47,7 @@ if (localStorage.getItem('users') === null) {
 
 function loadUsers() {
   users = JSON.parse(localStorage.getItem('users')).map(
-    (user) => new User(user.username, user.password, user.email)
+    (user) => new User(user.username, user.password, user.email, user.time, user.completedLevels)
   );
 }
 
