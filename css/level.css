@@ -85,7 +85,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   color: #fff;
-  margin-top: -20vh;
+  margin-top: 5vh;
   margin-left: 19vw;
   text-align: center;
   text-shadow: rgba(0.1, 0.1, 0.1, 0.5) 0px 5px 10px;
@@ -227,17 +227,4 @@ body {
     transform: scale(1.05);
 }
 
-#bandeiraTuga {
-    display: flex;
-    margin-left: 30vw;
-    margin-top: 0vh;
-    padding: 10px;
-    width: 15vh;
-    height: auto;
-}
-
-#bandeiraTuga:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-}
 
