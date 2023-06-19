@@ -1,0 +1,206 @@
+body {
+  background-image: url('../imgs/nivel1.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+#timer-title {
+  font-size: 35px;
+  margin-top: 1vh;
+  margin-left: 1vw;
+  color: #d9b632;
+}
+
+#timer-body {
+  font-size: 25px;
+  margin-left: 2.5vw;
+  color: white;
+}
+
+#question {
+  width: 60vw;
+  height: 23vh;
+  display: flex;
+  margin-left: 13vw;
+  margin-top: 10vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
+}
+
+#question-title {
+  font-size: 35px;
+  margin-top: 1vh;
+  color: #d9b632;
+}
+
+#question-body {
+  text-align: center;
+}
+
+#rectangle {
+  width: 60vw;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12vw;
+  margin-top: 22vh;
+  background-color: white;
+  border-radius: 20px;
+}
+
+#message-body {
+  font-size: 25px;
+}
+
+@media (max-width: 1440px) {
+  body {
+    background-image: url('../imgs/nivel1.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+  }
+
+  .container-fluid {
+    padding: 0 !important;
+  }
+
+  #timer-title {
+    font-size: 35px;
+    margin-top: 1vh;
+    margin-left: 1vw;
+    color: #d9b632;
+  }
+
+  #timer-body {
+    font-size: 25px;
+    margin-left: 2.5vw;
+    color: white;
+  }
+
+  #question {
+    width: 60vw;
+    height: 23vh;
+    display: flex;
+    margin-left: 13vw;
+    margin-top: 10vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    flex-direction: column;
+    z-index: 1;
+    position: absolute;
+  }
+
+  #question-title {
+    font-size: 35px;
+    margin-top: 1vh;
+    color: #d9b632;
+  }
+
+  #question-body {
+    text-align: center;
+  }
+
+  #rectangle {
+    width: 60vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12vw;
+    margin-top: 22vh;
+    background-color: white;
+    border-radius: 20px;
+  }
+
+  #message-body {
+    font-size: 20px;
+  }
+}
+
+#flags {
+  margin-top: 4vh;
+  margin-left: 10vw;
+  padding-top: 2vh;
+}
+
+#answer1 {
+  background-image: url('../imgs/bandeiras/brasil.jpg');
+  width: 15vw;
+  height: 15vh;
+  background-size: 100% 100%;
+  border-radius: 10px;
+}
+
+#answer1:hover {
+  border: 5px solid #d9b632;
+  cursor: pointer;
+}
+
+#answer2 {
+  background-image: url('../imgs/bandeiras/holanda.jpg');
+  width: 15vw;
+  height: 15vh;
+  background-size: 100% 100%;
+  border-radius: 10px;
+}
+
+#answer2:hover {
+  border: 5px solid #d9b632;
+  cursor: pointer;
+}
+
+#answer3 {
+  background-image: url('../imgs/bandeiras/portugal.jpg');
+  width: 15vw;
+  height: 15vh;
+  background-size: 100% 100%;
+  border-radius: 10px;
+}
+
+#answer3:hover {
+  border: 5px solid #d9b632;
+  cursor: pointer;
+}
+
+#answer4 {
+  background-image: url('../imgs/bandeiras/uk.jpg');
+  width: 15vw;
+  height: 15vh;
+  background-size: 100% 100%;
+  border-radius: 10px;
+}
+
+#answer4:hover {
+  border: 5px solid #d9b632;
+  cursor: pointer;
+}
+
+#voltar {
+  width: 10vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin-left: 2vw;
+  color: #808080;
+}
+
+#voltar:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+  cursor: pointer;
+}
