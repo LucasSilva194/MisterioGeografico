@@ -40,6 +40,7 @@ function levelSelector() {
   if (level == 2) {
     levelTitle.innerHTML = levels[1].title;
     levelDesc.innerHTML = levels[1].body;
+    levelButton.href = './lvl-preencherEspaco.html';
   }
   if (level == 3) {
     levelTitle.innerHTML = levels[2].title;
