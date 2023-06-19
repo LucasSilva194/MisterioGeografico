@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/opcao.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Geografia em ação - Nivel 4</title>
+  </head>
+  <body>
+    <div id="main" class="container-fluid">
+      <div class="row mx-auto">
+        <div id="timer" class="col-auto">
+          <p id="timer-title">Tempo:</p>
+          <p id="timer-body">00:00</p>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center mx-auto text-align-center">
+        <div id="question" class="col-auto">
+          <p id="question-title">Título do desafio:</p>
+          <p id="question-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus at felis ut
+            egestas?
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center mx-auto text-align-center">
+        <div id="message" class="col-auto">
+          <p id="message-body">Seleciona a(s) resposta(s) correta(s)!</p>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center mx-auto text-align-center">
+        <div id="answers" class="col-auto">
+          <div class="row align-items-center mx-auto text-align-center">
+            <div class="col-auto">
+              <input id="answer1" class="answer-button" type="checkbox" name="answer" value="0" />
+              <label id="answer1-label" for="answer1">Resposta 1</label>
+            </div>
+          </div>
+          <div class="row align-items-center mx-auto text-align-center">
+            <div class="col-auto">
+              <input id="answer2" class="answer-button" type="checkbox" name="answer" value="1" />
+              <label id="answer2-label" for="answer2">Resposta 2</label>
+            </div>
+          </div>
+          <div class="row align-items-center mx-auto text-align-center">
+            <div class="col-auto">
+              <input id="answer3" class="answer-button" type="checkbox" name="answer" value="2" />
+              <label id="answer3-label" for="answer3">Resposta 3</label>
+            </div>
+          </div>
+          <div class="row align-items-center mx-auto text-align-center">
+            <div class="col-auto">
+              <input id="answer4" class="answer-button" type="checkbox" name="answer" value="3" />
+              <label id="answer4-label" for="answer4">Resposta 4</label>
+            </div>
+          </div>
+          <div class="row align-items-center mx-auto text-align-center">
+            <div class="col-auto">
+              <input id="answer5" class="answer-button" type="checkbox" name="answer" value="4" />
+              <label id="answer5-label" for="answer5">Resposta 5</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-between">
+        <div class="col-auto mx-auto align-self-center text-center">
+          <a href="./levels.html">
+            <input id="voltar" type="button" value="Voltar" />
+          </a>
+        </div>
+        <div class="col-auto mx-auto align-self-center text-center">
+          <input id="avancar" type="button" value="Avançar" />
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="../js/opcao.js"></script>
+</html>

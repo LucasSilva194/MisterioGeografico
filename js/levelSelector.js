@@ -49,6 +49,7 @@ function levelSelector() {
   if (level == 4) {
     levelTitle.innerHTML = levels[3].title;
     levelDesc.innerHTML = levels[3].body;
+    levelButton.href = './lvl-opcao.html';
   }
   if (level == 5) {
     levelTitle.innerHTML = levels[4].title;
