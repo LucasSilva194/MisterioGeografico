@@ -64,7 +64,7 @@ Este documento serve de apoio para verificar as perguntas a as respetivas respos
 
 ## Preencher os espaços
 
-1. A cidade de Lisboa é a capital de (...) e está localizada na costa (...) do país. Ela é banhada pelo rio (...) e tem um clima mediterrâneo, com invernos suaves e verões quentes e secos. A cidade é famosa por suas atrações históricas, como a Torre de (...) e o Mosteiro dos (...), que atraem milhões de turistas todos os anos.
+1. A cidade de Lisboa é a capital de (...) e está localizada na costa (...) do país. Ela é banhada pelo rio (...) e tem um clima mediterrâneo, com invernos suaves e verões quentes e secos. A cidade é famosa por suas atrações históricas, como a Torre de (...) e o Mosteiro dos (...), que atraem milhões de turistas todos os anos.	
 
 Respostas:
 -   Portugal
