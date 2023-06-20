@@ -95,7 +95,7 @@ function login() {
     return;
   }
 
-  /* check for admin login */
+  // Check for admin login
   if (username === 'admin' && password === 'admin') {
     Swal.fire({
       icon: 'success',

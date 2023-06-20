@@ -1,4 +1,3 @@
-// Define an array of questions and answers
 var questions = [
   {
     question: 'Qual dos seguintes países não faz parte do Reino Unido?',
@@ -52,18 +51,16 @@ var questions = [
   },
 ];
 
-var usedQuestions = []; // Array to store indices of used questions
+var usedQuestions = [];
 
 let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
 
-// Function to randomly select a question that has not been used before
 function getRandomQuestion() {
   var unusedQuestions = questions.filter(function (question, index) {
     return usedQuestions.indexOf(index) === -1;
   });
 
   if (unusedQuestions.length === 0) {
-    // All questions have been used, reset the usedQuestions array
     usedQuestions = [];
     unusedQuestions = questions;
   }
@@ -90,7 +87,6 @@ function checkAnswer(selectedAnswer) {
         Swal.showLoading();
       },
       willClose: () => {
-        // Move to the next question
         populateQuestion();
       },
     });
@@ -108,7 +104,6 @@ function checkAnswer(selectedAnswer) {
   }
 }
 
-// Function to attach event listeners to the answer buttons
 function attachEventListeners() {
   var answerButtons = document.getElementsByClassName('answer-button');
   for (var i = 0; i < answerButtons.length; i++) {
@@ -118,16 +113,14 @@ function attachEventListeners() {
   }
 }
 
-var startTime; // Variable to store the start time
-var timerElement = document.getElementById('timer-body'); // Timer element in HTML
+var startTime;
+var timerElement = document.getElementById('timer-body');
 
-// Function to start the timer
 function startTimer() {
   startTime = new Date().getTime();
   updateTimer();
 }
 
-// Function to update the timer display
 function updateTimer() {
   var currentTime = new Date().getTime();
   var elapsedTime = currentTime - startTime;
@@ -135,7 +128,6 @@ function updateTimer() {
   var minutes = Math.floor(seconds / 60);
   seconds %= 60;
 
-  // Add leading zero if seconds or minutes is less than 10
   if (seconds < 10) {
     seconds = '0' + seconds;
   }
@@ -143,14 +135,11 @@ function updateTimer() {
     minutes = '0' + minutes;
   }
 
-  // Update the timer element with the current time
   timerElement.textContent = minutes + ':' + seconds;
 
-  // Call updateTimer again after 1 second
   setTimeout(updateTimer, 1000);
 }
 
-// Function to stop the timer and save the time to localStorage
 function stopTimerAndSaveTime() {
   var endTime = new Date().getTime();
   var elapsedTime = endTime - startTime;
@@ -181,11 +170,8 @@ function stopTimerAndSaveTime() {
 
 // Function to populate the HTML elements with a randomly selected question
 function populateQuestion() {
-  // Check if the maximum number of questions has been reached
   if (usedQuestions.length >= 4) {
-    // Stop the timer and save the time to localStorage
     stopTimerAndSaveTime();
-    // Redirect to ./levels.html
     Swal.fire({
       title: 'Parabéns!',
       text: `Concluiu o desafio dos continentes em ${
@@ -205,7 +191,6 @@ function populateQuestion() {
     });
   }
 
-  // Get references to the HTML elements
   var questionTitle = document.getElementById('question-title');
   var questionBody = document.getElementById('question-body');
   var answer1 = document.getElementById('answer1');
@@ -213,10 +198,8 @@ function populateQuestion() {
   var answer3 = document.getElementById('answer3');
   var answer4 = document.getElementById('answer4');
 
-  // Randomly select a question that has not been used before
   var selectedQuestion = getRandomQuestion();
 
-  // Populate the HTML elements with the selected question and answers
   questionTitle.textContent = 'Desafio dos Continentes:';
   questionBody.textContent = selectedQuestion.question;
   answer1.value = selectedQuestion.answers[0];
@@ -224,11 +207,9 @@ function populateQuestion() {
   answer3.value = selectedQuestion.answers[2];
   answer4.value = selectedQuestion.answers[3];
 
-  // Attach event listeners to the answer buttons
   attachEventListeners();
 }
 
 startTimer();
 
-// Call the function to populate the initial question
 populateQuestion();
