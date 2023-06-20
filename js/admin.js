@@ -45,52 +45,6 @@ document.querySelector('#remover').addEventListener("keydown", function(e) {
     }
 })
 
-// função remover desafio
-
-function removerDesafio(desafioId) {
-    let desafios = JSON.parse(localStorage.getItem('desafios'));
-  
-    // Verificar se o desafio existe no array
-    const desafioExistente = desafios.find(desafio => desafio.id === desafioId);
-  
-    if (!desafioExistente) {
-      swal.fire({
-        title: "Ups!",
-        text: "Desafio não encontrado!",
-        icon: "error",
-        showConfirmButton: false,
-        timer: 2000,
-        toast: true,
-        position: 'top',
-        timerProgressBar: true
-      });
-      return; // Encerrar a função se o desafio não for encontrado
-    }
-  
-    // Filtrar o array para excluir o desafio com o desafioId fornecido
-    desafios = desafios.filter(desafio => desafio.id !== desafioId);
-  
-    // Armazenar o array atualizado no localStorage
-    localStorage.setItem('desafios', JSON.stringify(desafios));
-  
-    swal.fire({
-      title: "Sucesso",
-      text: "Desafio removido com sucesso",
-      icon: "success",
-      showConfirmButton: false,
-      timer: 2000,
-      toast: true,
-      position: 'top',
-      timerProgressBar: true
-    });
-  }
-  
-  
-  document.querySelector('#removerDesafio').addEventListener("keydown", function(e) {
-    if(e.key === 'Enter') {
-      removerDesafio(e.target.value);
-    }
-  });
   
 
 
