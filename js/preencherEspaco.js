@@ -1,69 +1,88 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('avancar').addEventListener('click', checkAnswers )
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('avancar').addEventListener('click', checkAnswers);
+});
 
 var questions = [
-    {
-        question:['A cidade de Lisboa é a capital de ','e está localizada na costa ','do país. Ela é banhada pelo rio ','e tem um clima mediterrâneo, com invernos suaves e verões quentes e secos. A cidade é famosa por suas atrações históricas, como a Torre de ','e o Mosteiro dos ','que atraem milhões de turistas todos os anos.'],
-        answers: ['Portugal', 'oeste' , 'Tejo' , 'Belém', 'Jerónimos'],
-    },
-    {
-        question: ['O Porto é a segunda maior cidade de ','localizada no ','do país, na margem direita do rio ','. Ela é conhecida por seus edifícios históricos, como a Torre dos','e a ','da Sé, que datam da Idade Média.'],
-        answers: ['Portugal', 'Norte', 'Douro', 'Clérigos', 'Catedral'],
-    },
-    {
-        question: ['Londres é a capital da Inglaterra e do Reino ','. Localizada no sudeste do país, a cidade é atravessada pelo rio ','e tem uma rica história que remonta aos tempos romanos. Londres é conhecida por seus marcos icônicos, como o Big ','e o ','de Buckingham.'],
-        answers: ['Unido', 'Tamisa', 'Ben', 'Palácio'],
-    },
-    {
-        question: ['A cidade de Paris é a capital da ','e é conhecida por seus marcos icônicos, como a Torre ','e o ','do Triunfo. A cidade está localizada no centro do país e é atravessada pelo rio ','.'],
-        answers: ['França', 'Eiffel', 'Arco', 'Sena'],
-    },
-    {
-        question: ['Nova York é a maior cidade dos Estados Unidos e um importante centro financeiro, cultural e turístico. A cidade está localizada na costa ','do país e é atravessada pelo rio ','. Nova York é conhecida por seus marcos famosos, como a ','Square, o Central ','e a Estátua da Liberdade, e por seus arranha-céus icônicos, como o ','State Building e o One World Trade Center.'],
-        answers: ['Este', 'Hudson', 'Times', 'Park', 'Empire'],
-    },
+  {
+    question: [
+      {
+        frase1: 'A cidade de Lisboa é a capital de ',
+        frase2: 'e está localizada na costa ',
+        frase3: 'do país. Ela é banhada pelo rio ',
+        frase4: 'A cidade é famosa por suas atrações históricas, como a Torre de ',
+        frase5: 'e o Mosteiro dos ',
+        frase6: 'que atraem milhões de turistas todos os anos.',
+      },
+    ],
+    answers: ['Portugal', 'oeste', 'Tejo', 'Belém', 'Jerónimos'],
+  },
+  {
+    question: [
+      {
+        frase1: 'O Porto é a segunda maior cidade de ',
+        frase2: 'localizada no ',
+        frase3: 'do país, na margem direita do rio ',
+        frase4: '. Ela é conhecida por seus edifícios históricos, como a Torre dos ',
+        frase5: 'e a ',
+        frase6: 'da Sé, que datam da Idade Média.',
+      },
+    ],
+    answers: ['Portugal', 'Norte', 'Douro', 'Clérigos', 'Catedral'],
+  },
+  {
+    question: [
+      {
+        frase1: 'Londres é a capital da Inglaterre e do Reino ',
+        frase2: '. Localizada no sudeste do país, a cidade é atravessada pelo rio ',
+        frase3: 'Londres é conhecida por seus marcos icônicos, como o Big ',
+        frase4: 'e o ',
+        frase5: 'de Buckingham. Londres também tem galerias de arte, como a ',
+      },
+    ],
+    answers: ['Unido', 'Tamisa', 'Ben', 'Palácio', 'National'],
+  },
+  {
+    question: [
+      {
+        frase1: 'A cidade de Paris é a capital da ',
+        frase2: 'e é conhecida por seus marcos icônicos, como a Torre ',
+        frase3: 'e o ',
+        frase4: 'do Triunfo. A cidade está localizada no centro do país e é atravessada pelo rio ',
+        frase5: 'E seus pontos turísticos mais famosos são a Catedral de ',
+      },
+    ],
+    answers: ['França', 'Eiffel', 'Arco', 'Sena', 'Notre Dame'],
+  },
+  {
+    question: [
+      {
+        frase1: 'Nova York é a maior cidade dos Estados Unidos e está localizada na costa',
+        frase2: 'do país e é atravessada pelo rio ',
+        frase3: '. Nova York é conhecida por seus marcos famosos, como a ',
+        frase4: 'Square, o Central ',
+        frase5: 'e a Estátua da Liberdade, e por seus arranha-céus icônicos, como o ',
+        frase6: 'State Building e o One World Trade Center.',
+      },
+    ],
+    answers: ['Este', 'Hudson', 'Times', 'Park', 'Empire'],
+  },
 ];
-
 
 var usedQuestions = [];
 
 var loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
 
 function getRandomQuestion() {
-    var unusedQuestions = questions.filter(function (question, index) {
-      return usedQuestions.indexOf(index) === -1;
-    });
-  
-    if (unusedQuestions.length === 0) {
-      // All questions have been used, reset the usedQuestions array
-      usedQuestions = [];
-      unusedQuestions = questions;
-    }
-  
-    var randomIndex = Math.floor(Math.random() * unusedQuestions.length);
-    var selectedQuestion = unusedQuestions[randomIndex];
-    usedQuestions.push(questions.indexOf(selectedQuestion));
-  
-    return selectedQuestion;
+  var randomIndex = Math.floor(Math.random() * questions.length);
+  var randomQuestion = questions[randomIndex];
+  if (usedQuestions.includes(randomQuestion)) {
+    return getRandomQuestion();
+  }
+  usedQuestions.push(randomQuestion);
+  return randomQuestion;
 }
 
 var pergunta1 = getRandomQuestion();
-
-var questionTitle = document.getElementById('answer-body');
-
-console.log(pergunta1);
-console.log(questionTitle);
-console.log(pergunta1.question.length);
-
-for(let i = 0; i<pergunta1.question.length; i++) {
-    questionTitle.innerHTML += pergunta1.question[i];
-    if(i == pergunta1.question.length - 1) {
-        break;
-    }
-    questionTitle.innerHTML += `<input id='answer${i}' type="text" class="form-control">`;
-}
-
 
 //Função Começar Relogio
 var startTime; // Variable to store the start time
@@ -150,47 +169,53 @@ startTimer();
 
 //Função para verificar se as respostas estão corretas
 function checkAnswers() {
-    var correctAnswers = 0;
-    for(let i = 0; i<pergunta1.answers.length; i++) {
-        var answer = document.getElementById(`answer${i}`).value;
-        if(answer === pergunta1.answers[i]) {
-            correctAnswers++;
-        }
+  var answer0 = document.getElementById('answer0').value;
+  var answer1 = document.getElementById('answer1').value;
+  var answer2 = document.getElementById('answer2').value;
+  var answer3 = document.getElementById('answer3').value;
+  var answer4 = document.getElementById('answer4').value;
+
+  var answers = [answer0, answer1, answer2, answer3, answer4];
+
+  var correctAnswers = pergunta1.answers;
+
+  var correctAnswersCounter = 0;
+
+  for (var i = 0; i < answers.length; i++) {
+    if (answers[i] === correctAnswers[i]) {
+      correctAnswersCounter++;
     }
-    console.log(correctAnswers);
-    if(correctAnswers === pergunta1.answers.length) {
-        stopTimerAndSaveTime();
-        //faz-me um swal para a pagina de levels quando clico no avancar
-        swal.fire({
-            title: "Parabéns!",
-            text: "Acertaste a frase!",
-            icon: "success",
-            showConfirmButton: false,
-            timer: 2000,
-            willClose: () => {
-                window.location.href = './levels.html';
-            }
-        });
-    } else {
-        swal.fire({
-            title: "Ups!",
-            text: "Não acertaste a frase!",
-            icon: "error",
-            showConfirmButton: false,
-            timer: 2000,
-        });
-    }
+  }
+
+  if (correctAnswersCounter === 5) {
+    alert('Parabéns! Você acertou todas as respostas!');
+    stopTimerAndSaveTime();
+    window.location.href = '../html/levels.html';
+  } else {
+    alert('Você acertou ' + correctAnswersCounter + ' respostas. Tente novamente!');
+    window.location.href = '../html/lvl-preencherEspaco.html';
+  }
 }
 
+function populateQuestion() {
+  var frase1 = document.getElementById('frase1');
+  var frase2 = document.getElementById('frase2');
+  var frase3 = document.getElementById('frase3');
+  var frase4 = document.getElementById('frase4');
+  var frase5 = document.getElementById('frase5');
+  var frase6 = document.getElementById('frase6');
 
+  frase1.textContent = pergunta1.question[0].frase1;
+  frase1.innerHTML += `<input type="text" id="answer0" class="input-answer" placeholder="Resposta 1">`;
+  frase2.textContent = pergunta1.question[0].frase2;
+  frase2.innerHTML += `<input type="text" id="answer1" class="input-answer" placeholder="Resposta 2">`;
+  frase3.textContent = pergunta1.question[0].frase3;
+  frase3.innerHTML += `<input type="text" id="answer2" class="input-answer" placeholder="Resposta 3">`;
+  frase4.textContent = pergunta1.question[0].frase4;
+  frase4.innerHTML += `<input type="text" id="answer3" class="input-answer" placeholder="Resposta 4">`;
+  frase5.textContent = pergunta1.question[0].frase5;
+  frase5.innerHTML += `<input type="text" id="answer4" class="input-answer" placeholder="Resposta 5">`;
+  frase6.textContent = pergunta1.question[0].frase6;
+}
 
-
-
-
-
-
-
-
-
-
-
+populateQuestion();

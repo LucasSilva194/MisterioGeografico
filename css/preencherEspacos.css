@@ -59,50 +59,50 @@ body {
 }
 
 #answer-body {
-    width: 50vw;
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 0vw;
+  width: 70vw;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0vw;
 }
 
 #voltar {
-    width: 10vw;
-    height: 6vh;
-    border-radius: 15px;
-    border: 1px solid #ffe47d;
-    padding: 5px;
-    background-color: #ffe47d;
-    margin-top: 10vh;
-    margin-right: 30vw;
-    color: #808080;
-  }
-  
-  #voltar:hover {
-    transform: scale(1.05);
-    background-color: #d9b632;
-    border: 1px solid #d9b632;
-    color: #575757;
-    cursor: pointer;
-  }
-  
-  #avancar {
-    width: 10vw;
-    height: 6vh;
-    border-radius: 15px;
-    border: 1px solid #ffe47d;
-    padding: 5px;
-    background-color: #ffe47d;
-    margin-top: 10vh;
-    margin-left: 30vw;
-    color: #808080;
-  }
-  
-  #avancar:hover {
-    transform: scale(1.05);
-    background-color: #d9b632;
-    border: 1px solid #d9b632;
-    color: #575757;
-    cursor: pointer;
-  }
+  width: 10vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin-top: 10vh;
+  margin-right: 30vw;
+  color: #808080;
+}
+
+#voltar:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+  cursor: pointer;
+}
+
+#avancar {
+  width: 10vw;
+  height: 6vh;
+  border-radius: 15px;
+  border: 1px solid #ffe47d;
+  padding: 5px;
+  background-color: #ffe47d;
+  margin-top: 10vh;
+  margin-left: 30vw;
+  color: #808080;
+}
+
+#avancar:hover {
+  transform: scale(1.05);
+  background-color: #d9b632;
+  border: 1px solid #d9b632;
+  color: #575757;
+  cursor: pointer;
+}
