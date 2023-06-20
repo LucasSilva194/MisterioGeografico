@@ -186,9 +186,10 @@ function populateQuestion() {
       },
       willClose: () => {
         window.location.href = './levels.html';
-        loggedUser.completedLevels.push('1');
       },
     });
+    loggedUser.completedLevels.push(1);
+    localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
   }
 
   var questionTitle = document.getElementById('question-title');
