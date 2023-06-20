@@ -73,7 +73,7 @@ Este documento serve de apoio para verificar as perguntas a as respetivas respos
 
 ## Preencher os espaços
 
-1. A cidade de Lisboa é a capital de (...) e está localizada na costa (...) do país. Ela é banhada pelo rio (...) e tem um clima mediterrâneo, com invernos suaves e verões quentes e secos. A cidade é famosa por suas atrações históricas, como a Torre de (...) e o Mosteiro dos (...), que atraem milhões de turistas todos os anos.	
+1. A cidade de Lisboa é a capital de (...) e está localizada na costa (...) do país. Ela é banhada pelo rio (...) e tem um clima mediterrâneo, com invernos suaves e verões quentes e secos. A cidade é famosa por suas atrações históricas, como a Torre de (...) e o Mosteiro dos (...), que atraem milhões de turistas todos os anos.
 
 Respostas:
 
@@ -218,3 +218,105 @@ Respostas:
 - Deserto do Atacama
 - Deserto de Kalahari
 - Deserto da Antártida
+
+## Desvenda a Nação
+
+1.
+
+- Este país está localizado na Europa.
+- A capital deste país é Lisboa.
+- A língua oficial deste país é o português.
+- A moeda deste país é o euro.
+- Este país faz fronteira com a Espanha.
+
+Resposta: Portugal
+
+2.
+
+- Este país está localizado na América do Sul.
+- A capital deste país é Brasília.
+- A língua oficial deste país é o português.
+- A moeda deste país é o real.
+- Este país faz fronteira com a Argentina.
+
+Resposta: Brasil
+
+3.
+
+- Este país está localizado na América do Norte.
+- A capital deste país é Washington.
+- A língua oficial deste país é o inglês.
+- A moeda deste país é o dólar.
+- Este país faz fronteira com o México.
+
+Resposta: Estados Unidos da América
+
+4.
+
+- Este país está localizado na América do Sul.
+- A capital deste país é Buenos Aires.
+- A língua oficial deste país é o espanhol.
+- A moeda deste país é o peso.
+- Este país faz fronteira com o Brasil.
+
+Resposta: Argentina
+
+5.
+
+- Este país está localizado na Europa.
+- Sua capital é Amesterdão.
+- A língua oficial deste país é o holandês.
+- A moeda deste país é o euro.
+- A flor tulipa é um dos símbolos deste país.
+
+Resposta: Holanda
+
+6.
+
+- Este país está localizado na Europa.
+- A torre Eiffel é um dos símbolos deste país.
+- O rio Sena atravessa este país.
+- Faz fronteira com a Alemanha.
+- Nação de origem do pintor Claude Monet.
+
+Resposta: França
+
+7.
+
+- Este país está localizado na Europa.
+- Conhecido pelo seu formato de bota.
+- As massas e as pizzas são alguns dos pratos típicos deste país.
+- Teve um grande império no passado.
+- A marca de carros Ferrari é originária deste país.
+
+Resposta: Itália
+
+8.
+
+- Este país está localizado na América do Sul.
+- A capital deste país é Bogotá.
+- A língua oficial deste país é o espanhol.
+- A moeda deste país é o peso.
+- Este país faz fronteira com o Brasil.
+
+Resposta: Colômbia
+
+9.
+
+- Este país está localizado na América do Norte.
+- A capital deste país é Ottowa.
+- A língua oficial deste país é o inglês.
+- Também se fala francês neste país.
+- Conhecido pela simpatia dos seus habitantes.
+
+Resposta: Canadá
+
+10.
+
+- Este país está localizado na Ásia.
+- Muito conhecido pela sua culinária.
+- A cultura deste país é muito diferente da cultura ocidental.
+- Sofreu um grande terremoto em 2011.
+- Muito conhecido pela sua tecnologia.
+
+Resposta: Japão

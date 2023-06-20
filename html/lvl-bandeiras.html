@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escolha Multilpa - Mistério geográfico</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/bandeiras.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div id="main" class="container-fluid">
+      <div class="row mx-auto">
+        <div id="timer" class="col-auto">
+          <p id="timer-title">Tempo:</p>
+          <p id="timer-body">00:00</p>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center mx-auto text-align-center">
+        <div id="question" class="col-auto">
+          <p id="question-title">Título do desafio:</p>
+          <p id="question-body">
+            1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempus at felis ut
+            egestas?
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center mx-auto">
+        <div id="rectangle" class="col-auto">
+          <p id="message-body">
+            1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+            2. urabitur tempus at felis ut egestas? <br />
+            3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+            4. Curabitur tempus at felis ut.
+          </p>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center mx-auto text-align-center">
+        <div id="flags" class="col-auto">
+          <div class="row align-items-center justify-content-center mx-auto text-align-center">
+            <div class="col-auto">
+              <input id="answer1" class="answer-button" type="button" value="" />
+            </div>
+            <div class="col-auto">
+              <input id="answer2" class="answer-button" type="button" value="" />
+            </div>
+          </div>
+          <div class="row align-items-center justify-content-center mx-auto text-align-center">
+            <div class="col-auto">
+              <input id="answer3" class="answer-button" type="button" value="" />
+            </div>
+            <div class="col-auto">
+              <input id="answer4" class="answer-button" type="button" value="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto">
+          <a href="./levels.html">
+            <input id="voltar" type="button" value="Voltar" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="../js/bandeiras.js"></script>
+</html>
