@@ -328,7 +328,7 @@ function populateQuestion() {
     stopTimerAndSaveTime();
     Swal.fire({
       title: 'Parabéns!',
-      text: `Concluiu o desafio dos continentes em ${
+      text: `Concluiu o Enigma das Bandeiras em ${
         timerElement.textContent.split(':')[0]
       } minutos e ${timerElement.textContent.split(':')[1]} segundos!`,
       icon: 'success',
@@ -340,9 +340,10 @@ function populateQuestion() {
       },
       willClose: () => {
         window.location.href = './levels.html';
-        loggedUser.completedLevels.push('2');
       },
     });
+    loggedUser.completedLevels.push(5);
+    localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
   }
 
   var questionBody = document.getElementById('message-body');

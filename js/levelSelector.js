@@ -55,6 +55,7 @@ function levelSelector() {
   if (level == 5) {
     levelTitle.innerHTML = levels[4].title;
     levelDesc.innerHTML = levels[4].body;
+    levelButton.href = './lvl-bandeiras.html';
   }
 
   levelButton.addEventListener('click', function () {

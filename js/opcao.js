@@ -141,12 +141,14 @@ function checkAnswers() {
   console.log('Correta:', correctAnswer);
   console.log('Selecionada:', selectedAnswers);
 
-  var isCorrect = true;
+  var isCorrect;
 
   for (var i = 0; i < selectedAnswers.length; i++) {
     if (!correctAnswer.includes(parseInt(selectedAnswers[i]))) {
       isCorrect = false;
       break;
+    } else {
+      isCorrect = true;
     }
   }
 
@@ -272,7 +274,7 @@ function populateQuestion() {
     stopTimerAndSaveTime();
     Swal.fire({
       title: 'Parabéns!',
-      text: `Concluiu o desafio dos continentes em ${
+      text: `Concluiu o desafio dos Ícones do Mundo em ${
         timerElement.textContent.split(':')[0]
       } minutos e ${timerElement.textContent.split(':')[1]} segundos!`,
       icon: 'success',
@@ -284,9 +286,10 @@ function populateQuestion() {
       },
       willClose: () => {
         window.location.href = './levels.html';
-        loggedUser.completedLevels.push('2');
       },
     });
+    loggedUser.completedLevels.push(4);
+    localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
   }
 
   var questionTitle = document.getElementById('question-title');

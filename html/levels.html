@@ -12,6 +12,7 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
   <body>
@@ -60,28 +61,120 @@
     </div>
   </body>
   <script>
-    /* get loggedUser username */
     let user = JSON.parse(localStorage.getItem('loggedUser'));
+    let completedLevels = user.completedLevels;
     document.getElementById('userNivel').innerHTML = `Utilizador: ${user.username}`;
 
     document.getElementById('level1').addEventListener('click', () => {
-      localStorage.setItem('level', 1);
+      if (completedLevels.includes(1)) {
+        document.getElementById('level1').href = '#';
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Nível 1 já concluído!',
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+          },
+        });
+      } else {
+        localStorage.setItem('level', 1);
+      }
     });
 
     document.getElementById('level2').addEventListener('click', () => {
-      localStorage.setItem('level', 2);
+      if (completedLevels.includes(2)) {
+        document.getElementById('level2').href = '#';
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Nível 2 já concluído!',
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+          },
+        });
+      } else {
+        localStorage.setItem('level', 2);
+      }
     });
 
     document.getElementById('level3').addEventListener('click', () => {
-      localStorage.setItem('level', 3);
+      if (completedLevels.includes(3)) {
+        document.getElementById('level3').href = '#';
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Nível 3 já concluído!',
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+          },
+        });
+      } else {
+        localStorage.setItem('level', 3);
+      }
     });
 
     document.getElementById('level4').addEventListener('click', () => {
-      localStorage.setItem('level', 4);
+      if (completedLevels.includes(4)) {
+        document.getElementById('level4').href = '#';
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Nível 4 já concluído!',
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+          },
+        });
+      } else {
+        localStorage.setItem('level', 4);
+      }
     });
 
     document.getElementById('level5').addEventListener('click', () => {
-      localStorage.setItem('level', 5);
+      if (completedLevels.includes(5)) {
+        document.getElementById('level5').href = '#';
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Nível 5 já concluído!',
+          showConfirmButton: false,
+          timer: 1500,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+          },
+        });
+      } else {
+        localStorage.setItem('level', 5);
+      }
     });
+
+    if (completedLevels.length === 5) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Parabéns!',
+        text: 'Completou todos os níveis!',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+        willClose: () => {
+          window.location.href = '/';
+        },
+      });
+    }
   </script>
 </html>
