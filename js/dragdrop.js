@@ -119,6 +119,8 @@ function populateQuestion() {
   flag1.setAttribute('src', selectedFlag.flag);
 }
 
+populateQuestion();
+
 var startTime;
 var timerElement = document.getElementById('timer-body');
 
