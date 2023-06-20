@@ -119,8 +119,6 @@ function populateQuestion() {
   flag1.setAttribute('src', selectedFlag.flag);
 }
 
-populateQuestion();
-
 var startTime;
 var timerElement = document.getElementById('timer-body');
 
@@ -129,6 +127,7 @@ function startTimer() {
   updateTimer();
 }
 
+// Function to update the timer display
 function updateTimer() {
   var currentTime = new Date().getTime();
   var elapsedTime = currentTime - startTime;
@@ -148,6 +147,7 @@ function updateTimer() {
   setTimeout(updateTimer, 1000);
 }
 
+// Function to stop the timer and save the time to localStorage
 function stopTimerAndSaveTime() {
   var endTime = new Date().getTime();
   var elapsedTime = endTime - startTime;
@@ -159,7 +159,6 @@ function stopTimerAndSaveTime() {
     seconds = '0' + seconds;
   }
 
-  // Remove the leading zero from minutes calculation
   var loggedUserMinutes = parseInt(loggedUser.time.split(':')[0]);
   var loggedUserSeconds = parseInt(loggedUser.time.split(':')[1]);
 
@@ -175,6 +174,7 @@ function stopTimerAndSaveTime() {
     newSeconds = '0' + newSeconds;
   }
 
+  // Remove the leading zero from newMinutes if it's less than 10
   var newMinutesString = newMinutes.toString();
   if (newMinutes < 10) {
     newMinutesString = '0' + newMinutesString.slice(-1);

@@ -84,11 +84,9 @@ function getRandomQuestion() {
 
 var pergunta1 = getRandomQuestion();
 
-//Função Começar Relogio
-var startTime; // Variable to store the start time
-var timerElement = document.getElementById('timer-body'); // Timer element in HTML
+var startTime;
+var timerElement = document.getElementById('timer-body');
 
-// Function to start the timer
 function startTimer() {
   startTime = new Date().getTime();
   updateTimer();
@@ -102,7 +100,6 @@ function updateTimer() {
   var minutes = Math.floor(seconds / 60);
   seconds %= 60;
 
-  // Add leading zero if seconds or minutes is less than 10
   if (seconds < 10) {
     seconds = '0' + seconds;
   }
@@ -110,10 +107,8 @@ function updateTimer() {
     minutes = '0' + minutes;
   }
 
-  // Update the timer element with the current time
   timerElement.textContent = minutes + ':' + seconds;
 
-  // Call updateTimer again after 1 second
   setTimeout(updateTimer, 1000);
 }
 
@@ -129,7 +124,6 @@ function stopTimerAndSaveTime() {
     seconds = '0' + seconds;
   }
 
-  // Remove the leading zero from minutes calculation
   var loggedUserMinutes = parseInt(loggedUser.time.split(':')[0]);
   var loggedUserSeconds = parseInt(loggedUser.time.split(':')[1]);
 
