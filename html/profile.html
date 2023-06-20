@@ -36,6 +36,12 @@
               <h4>Melhor Tempo:</h4>
               <h2 id="logged-tempo">Nenhum tempo registado</h2>
             </div>
+            <div id="medalhas" class="col-12">
+              <h4>Medalhas:</h4>
+              <img id="medal1" src="../imgs/medalha1.png" alt="" />
+              <img id="medal2" src="../imgs/medalha2.png" alt="" />
+              <img id="medal3" src="../imgs/medalha3.png" alt="" />
+            </div>
           </div>
           <div class="row justify-content-center align-items-center">
             <div class="col-auto">
@@ -78,6 +84,34 @@
           window.location.href = './login.html';
         }
       });
+    }
+
+    let loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+    let completedLevels = loggedUser.completedLevels;
+
+    let medal1 = document.getElementById('medal1');
+    let medal2 = document.getElementById('medal2');
+    let medal3 = document.getElementById('medal3');
+
+    if (completedLevels.length === 0 || completedLevels.length === 1) {
+      medal1.style.display = 'none';
+      medal2.style.display = 'none';
+      medal3.style.display = 'none';
+    }
+
+    if (completedLevels.length === 2 || completedLevels.length === 3) {
+      medal2.style.display = 'none';
+      medal3.style.display = 'none';
+    }
+
+    if (completedLevels.length === 4) {
+      medal3.style.display = 'none';
+    }
+
+    if (completedLevels.length === 5) {
+      medal1.style.display = 'block';
+      medal2.style.display = 'block';
+      medal3.style.display = 'block';
     }
   };
 </script>

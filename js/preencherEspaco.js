@@ -189,6 +189,8 @@ function checkAnswers() {
 
   if (correctAnswersCounter === 5) {
     alert('Parabéns! Você acertou todas as respostas!');
+    loggedUser.completedLevels.push(2);
+    localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
     stopTimerAndSaveTime();
     window.location.href = '../html/levels.html';
   } else {

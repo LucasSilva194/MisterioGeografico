@@ -160,6 +160,34 @@
       }
     });
 
+    if (completedLevels.length === 2) {
+      Swal.fire({
+        imageUrl: '../imgs/medalha1.png',
+        title: 'Parabéns!',
+        text: 'Completou 2 nives e recebeu esta medalha!',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+      });
+    }
+
+    if (completedLevels.length == 4) {
+      Swal.fire({
+        imageUrl: '../imgs/medalha2.png',
+        title: 'Parabéns!',
+        text: 'Completou 4 nives e recebeu esta medalha!',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+      });
+    }
+
     if (completedLevels.length === 5) {
       Swal.fire({
         icon: 'success',

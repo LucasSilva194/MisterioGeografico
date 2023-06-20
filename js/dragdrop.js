@@ -97,7 +97,8 @@ function populateQuestion() {
       },
       willClose: () => {
         window.location.href = './levels.html';
-        loggedUser.completedLevels.push('1');
+        loggedUser.completedLevels.push(3);
+        localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
       },
     });
   }
@@ -229,8 +230,10 @@ function checkAnswer(selectedAnswer) {
         Swal.showLoading();
       },
       willClose: () => {
-        document.querySelector("#country_list").innerHTML = document.querySelector("#bordaRectangle").innerHTML + document.querySelector("#country_list").innerHTML;
-	      document.querySelector("#bordaRectangle").innerHTML = "";
+        document.querySelector('#country_list').innerHTML =
+          document.querySelector('#bordaRectangle').innerHTML +
+          document.querySelector('#country_list').innerHTML;
+        document.querySelector('#bordaRectangle').innerHTML = '';
         populateQuestion();
       },
     });
@@ -245,8 +248,10 @@ function checkAnswer(selectedAnswer) {
         Swal.showLoading();
       },
       willClose: () => {
-        document.querySelector("#country_list").innerHTML = document.querySelector("#bordaRectangle").innerHTML + document.querySelector("#country_list").innerHTML;
-	      document.querySelector("#bordaRectangle").innerHTML = "";
+        document.querySelector('#country_list').innerHTML =
+          document.querySelector('#bordaRectangle').innerHTML +
+          document.querySelector('#country_list').innerHTML;
+        document.querySelector('#bordaRectangle').innerHTML = '';
       },
     });
   }

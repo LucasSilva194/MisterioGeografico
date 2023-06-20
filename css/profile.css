@@ -128,3 +128,36 @@ body {
   border-radius: 10px;
   font-size: 20px;
 }
+
+#medal1 {
+  width: 5vw;
+  height: 10vh;
+}
+
+#medal2 {
+  width: 5vw;
+  height: 10vh;
+}
+
+#medal3 {
+  width: 5vw;
+  height: 10vh;
+}
+
+/* media query for mac 13inch */
+@media only screen and (max-width: 1440px) {
+  #medal1 {
+    width: 3vw;
+    height: 5vh;
+  }
+
+  #medal2 {
+    width: 3vw;
+    height: 5vh;
+  }
+
+  #medal3 {
+    width: 3vw;
+    height: 5vh;
+  }
+}

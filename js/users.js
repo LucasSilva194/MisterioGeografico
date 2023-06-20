@@ -1,3 +1,5 @@
+const { get } = require('http');
+
 class User {
   constructor(username, password, email, time = '-') {
     this.username = username;
