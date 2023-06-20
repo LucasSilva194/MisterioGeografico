@@ -45,6 +45,7 @@ function levelSelector() {
   if (level == 3) {
     levelTitle.innerHTML = levels[2].title;
     levelDesc.innerHTML = levels[2].body;
+    levelButton.href = './lvl-dragdrop.html';
   }
   if (level == 4) {
     levelTitle.innerHTML = levels[3].title;
