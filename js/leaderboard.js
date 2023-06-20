@@ -49,7 +49,7 @@ function createLeaderboard() {
     table.appendChild(sortedRows[i]);
   }
 
-  /* arrange numbers */
+  // Arrange nubers
   var rows = table.querySelectorAll('tr');
 
   for (var i = 0; i < rows.length; i++) {

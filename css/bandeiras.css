@@ -59,7 +59,8 @@ body {
 }
 
 #message-body {
-  font-size: 25px;
+  font-size: 23px;
+  margin-top: 1.5vh;
 }
 
 @media (max-width: 1440px) {
@@ -118,13 +119,14 @@ body {
     align-items: center;
     justify-content: center;
     margin-left: 12vw;
-    margin-top: 22vh;
+    margin-top: 19vh;
     background-color: white;
     border-radius: 20px;
   }
 
   #message-body {
     font-size: 20px;
+    margin-top: 2vh;
   }
 }
 
