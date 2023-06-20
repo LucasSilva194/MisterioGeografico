@@ -159,5 +159,22 @@
         localStorage.setItem('level', 5);
       }
     });
+
+    if (completedLevels.length === 5) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Parabéns!',
+        text: 'Completou todos os níveis!',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading();
+        },
+        willClose: () => {
+          window.location.href = '/';
+        },
+      });
+    }
   </script>
 </html>
