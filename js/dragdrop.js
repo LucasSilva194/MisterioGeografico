@@ -229,6 +229,8 @@ function checkAnswer(selectedAnswer) {
         Swal.showLoading();
       },
       willClose: () => {
+        document.querySelector("#country_list").innerHTML = document.querySelector("#bordaRectangle").innerHTML + document.querySelector("#country_list").innerHTML;
+	      document.querySelector("#bordaRectangle").innerHTML = "";
         populateQuestion();
       },
     });
@@ -242,6 +244,12 @@ function checkAnswer(selectedAnswer) {
       didOpen: () => {
         Swal.showLoading();
       },
+      willClose: () => {
+        document.querySelector("#country_list").innerHTML = document.querySelector("#bordaRectangle").innerHTML + document.querySelector("#country_list").innerHTML;
+	      document.querySelector("#bordaRectangle").innerHTML = "";
+      },
     });
   }
 }
+
+console.log(drop);
