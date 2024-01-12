@@ -106,3 +106,16 @@ body {
   color: #575757;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1440px) {
+  p {
+    font-size: 13px;
+  }
+  #answer-body {
+    width: 60vw;
+  }
+
+  #rectangle {
+    width: 65vw;
+  }
+}
