@@ -1,9 +1,11 @@
 class User {
-  constructor(username, password, email, time = '-') {
+  constructor(username, password, email, time = '-', level = 1) {
     this.username = username;
     this.password = password;
     this.email = email;
     this.time = time;
+    this.completedLevels = [];
+    this.level = level;
   }
 }
 
@@ -14,6 +16,7 @@ let users = [
     email: 'admin@example.com',
     time: '-',
     completedLevels: [],
+    level: 1,
   },
   {
     username: 'user1',
@@ -21,6 +24,7 @@ let users = [
     email: 'user1@example.com',
     time: '-',
     completedLevels: [],
+    level: 1,
   },
   {
     username: 'user2',
@@ -28,6 +32,7 @@ let users = [
     email: 'user2@example.com',
     time: '-',
     completedLevels: [],
+    level: 1,
   },
   {
     username: 'user3',
@@ -35,6 +40,7 @@ let users = [
     email: 'user3@example.com',
     time: '-',
     completedLevels: [],
+    level: 1,
   },
 ];
 
@@ -47,7 +53,15 @@ if (localStorage.getItem('users') === null) {
 
 function loadUsers() {
   users = JSON.parse(localStorage.getItem('users')).map(
-    (user) => new User(user.username, user.password, user.email, user.time, user.completedLevels)
+    (user) =>
+      new User(
+        user.username,
+        user.password,
+        user.email,
+        user.time,
+        user.level,
+        user.completedLevels
+      )
   );
 }
 

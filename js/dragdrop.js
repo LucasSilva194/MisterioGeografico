@@ -157,42 +157,30 @@ function stopTimerAndSaveTime() {
   var minutes = Math.floor(seconds / 60);
   seconds %= 60;
 
+  console.log('Minutes:', minutes); // Debugging
+  console.log('Seconds:', seconds); // Debugging
+
   if (seconds < 10) {
     seconds = '0' + seconds;
   }
-
-  var loggedUserMinutes = parseInt(loggedUser.time.split(':')[0]);
-  var loggedUserSeconds = parseInt(loggedUser.time.split(':')[1]);
-
-  var newMinutes = loggedUserMinutes + minutes;
-  var newSeconds = loggedUserSeconds + seconds;
-
-  if (newSeconds >= 60) {
-    newMinutes += 1;
-    newSeconds -= 60;
+  if (minutes < 10) {
+    minutes = '0' + minutes;
   }
 
-  if (newSeconds < 10) {
-    newSeconds = '0' + newSeconds;
-  }
+  console.log('Final Minutes:', minutes); // Debugging
+  console.log('Final Seconds:', seconds); // Debugging
 
-  // Remove the leading zero from newMinutes if it's less than 10
-  var newMinutesString = newMinutes.toString();
-  if (newMinutes < 10) {
-    newMinutesString = '0' + newMinutesString.slice(-1);
-  }
-
-  loggedUser.time = newMinutesString + ':' + newSeconds;
-  console.log('minutos: ' + newMinutesString + ' segundos: ' + newSeconds);
-
+  // Save the time to loggedUser
+  loggedUser.time = minutes + ':' + seconds;
   localStorage.setItem('loggedUser', JSON.stringify(loggedUser));
+
+  // Save the time to the users array in localStorage
   var users = JSON.parse(localStorage.getItem('users'));
-  for (var i = 0; i < users.length; i++) {
-    if (users[i].username === loggedUser.username) {
-      users[i] = loggedUser;
-      break;
+  users.forEach(function (user) {
+    if (user.username === loggedUser.username) {
+      user.time = loggedUser.time;
     }
-  }
+  });
   localStorage.setItem('users', JSON.stringify(users));
 }
 

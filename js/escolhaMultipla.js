@@ -147,12 +147,18 @@ function stopTimerAndSaveTime() {
   var minutes = Math.floor(seconds / 60);
   seconds %= 60;
 
+  console.log('Minutes:', minutes); // Debugging
+  console.log('Seconds:', seconds); // Debugging
+
   if (seconds < 10) {
     seconds = '0' + seconds;
   }
   if (minutes < 10) {
     minutes = '0' + minutes;
   }
+
+  console.log('Final Minutes:', minutes); // Debugging
+  console.log('Final Seconds:', seconds); // Debugging
 
   // Save the time to loggedUser
   loggedUser.time = minutes + ':' + seconds;
