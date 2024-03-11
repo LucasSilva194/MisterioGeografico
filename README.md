@@ -6,8 +6,7 @@ Welcome to the **Mistério Geográfico** Escape Room! This is a fun and educatio
 
 Download the repository or clone it to your local machine  
 Open the index.html file in your web browser  
-Follow the instructions on the screen to start the game (default login - username: user1, password: password1)
-The game is designed to be played in a web browser and does not require any additional software or plugins. It should work on most modern web browsers including Google Chrome, Firefox, and Safari.  
+Follow the instructions on the screen to start the game (default login - username: user1, password: password1). The game is designed to be played in a web browser and does not require any additional software or plugins. It should work on most modern web browsers including Google Chrome, Firefox, and Safari.  
 
 ## Objective
 
